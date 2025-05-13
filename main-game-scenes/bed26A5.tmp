@@ -1,0 +1,285 @@
+[gd_scene load_steps=25 format=3 uid="uid://dk2xyt1rhah6g"]
+
+[ext_resource type="Script" path="res://main-game-scenes/bedroom.gd" id="1_mikuj"]
+[ext_resource type="Texture2D" uid="uid://dx1w5wykgl1iu" path="res://assets/Home/Home - Refined.png" id="2_blw7n"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://player/player.tscn" id="3_qlnv8"]
+[ext_resource type="Texture2D" uid="uid://cg2j1nfgxvva4" path="res://assets/Home/Mark high table - resized.png" id="4_nqsgj"]
+[ext_resource type="Texture2D" uid="uid://d0v54u24mmxa4" path="res://assets/Home/Mark low table - resized.png" id="5_o58oh"]
+[ext_resource type="Texture2D" uid="uid://cu4ncol61tjv8" path="res://assets/Home/Mark bed - resized.png" id="6_l1ftv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n57ws"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cotg2"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0r8wl"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4ai7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pom7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oujpl"]
+size = Vector2(283.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf37n"]
+size = Vector2(238, 73.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdb75"]
+size = Vector2(148.75, 94)
+
+[sub_resource type="Animation" id="Animation_eofni"]
+resource_name = "DeskItemAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_omjtw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o2k56"]
+_data = {
+"DeskItemAnimation": SubResource("Animation_eofni"),
+"RESET": SubResource("Animation_omjtw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b14qm"]
+
+[sub_resource type="Animation" id="Animation_4b46x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_o58oh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s6tcs"]
+resource_name = "TutorialItem"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_o58oh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s1cma"]
+_data = {
+"RESET": SubResource("Animation_4b46x"),
+"TutorialItem": SubResource("Animation_s6tcs")
+}
+
+[sub_resource type="Animation" id="Animation_w360r"]
+resource_name = "BedAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_05dyt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iws6p"]
+_data = {
+"BedAnimation": SubResource("Animation_w360r"),
+"RESET": SubResource("Animation_05dyt")
+}
+
+[node name="Bedroom" type="Node2D"]
+script = ExtResource("1_mikuj")
+
+[node name="Player" parent="." instance=ExtResource("3_qlnv8")]
+position = Vector2(823, 387)
+scale = Vector2(0.9, 0.9)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(640, 360)
+texture = ExtResource("2_blw7n")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(220, 360)
+shape = SubResource("WorldBoundaryShape2D_n57ws")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1060, 360)
+shape = SubResource("WorldBoundaryShape2D_cotg2")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(640, 180)
+shape = SubResource("WorldBoundaryShape2D_0r8wl")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(640, 660)
+shape = SubResource("WorldBoundaryShape2D_4ai7l")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1030, 500)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+scale = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_7pom7")
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(909.25, 220)
+shape = SubResource("RectangleShape2D_oujpl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(346, 614.25)
+shape = SubResource("RectangleShape2D_rf37n")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(638.625, 453)
+shape = SubResource("RectangleShape2D_qdb75")
+
+[node name="Object" type="Node2D" parent="."]
+
+[node name="DeskObject" type="Area2D" parent="Object"]
+position = Vector2(840, 280)
+
+[node name="DeskItem" type="Node" parent="Object/DeskObject"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/DeskObject/DeskItem"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_o2k56")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Object/DeskObject/DeskItem"]
+position = Vector2(838, 264)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_nqsgj")
+
+[node name="BedArea" type="CollisionShape2D" parent="Object/DeskObject"]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b14qm")
+
+[node name="Tutorial" type="Area2D" parent="Object"]
+position = Vector2(760, 460)
+
+[node name="TutorialObject" type="CollisionShape2D" parent="Object/Tutorial"]
+position = Vector2(-77, 104)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_b14qm")
+
+[node name="TutorialItem" type="Node" parent="Object/Tutorial"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/Tutorial/TutorialItem"]
+libraries = {
+"": SubResource("AnimationLibrary_s1cma")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Object/Tutorial/TutorialItem"]
+position = Vector2(680, 460)
+texture = ExtResource("5_o58oh")
+
+[node name="BedObject" type="Area2D" parent="Object"]
+position = Vector2(315, 360)
+
+[node name="BedArea" type="CollisionShape2D" parent="Object/BedObject"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_b14qm")
+
+[node name="BedItem" type="Node" parent="Object/BedObject"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/BedObject/BedItem"]
+libraries = {
+"": SubResource("AnimationLibrary_iws6p")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Object/BedObject/BedItem"]
+position = Vector2(320, 260)
+texture = ExtResource("6_l1ftv")
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
+[connection signal="body_entered" from="Object/DeskObject" to="Player" method="_on_desk_object_body_entered"]
+[connection signal="body_exited" from="Object/DeskObject" to="Player" method="_on_desk_object_body_exited"]
+[connection signal="body_entered" from="Object/Tutorial" to="Player" method="_on_tutorial_body_entered"]
+[connection signal="body_exited" from="Object/Tutorial" to="Player" method="_on_tutorial_body_exited"]
+[connection signal="body_entered" from="Object/BedObject" to="Player" method="_on_bed_object_body_entered"]
+[connection signal="body_exited" from="Object/BedObject" to="Player" method="_on_bed_object_body_exited"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dcgv4dbvgbnjs"
+path="res://.godot/imported/CinemaObject.dialogue-3d7701c9245798d3a3e368af4595efa9.tres"
+
+[deps]
+
+source_file="res://dialogues/CinemaObject.dialogue"
+dest_files=["res://.godot/imported/CinemaObject.dialogue-3d7701c9245798d3a3e368af4595efa9.tres"]
+
+[params]
+
+defaults=true

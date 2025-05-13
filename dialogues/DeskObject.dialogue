@@ -1,0 +1,24 @@
+~ desk_object
+set PlayerStatus.isOpenDialog = true
+ระบบ: คุณอยู่ที่ โต๊ะเรียน
+ระบบ: คุณต้องการใช้คอมไหม ?
+- ใช่
+	ระบบ : คุณได้เปิดคอมขึ้นมา
+	ระบบ : คุณต้องการใช้คอมทำอะไร
+	- ค้นหาข้อมูล
+		ระบบ : คุณได้เปิดคอมขึ้นมา
+		ระบบ : คุณต้องการใช้คอมทำอะไร
+		do PlayerStatus.doActivity()
+		do PlayerStatus.doDeskActivity()
+	- แชทกับเพื่อน
+		ระบบ : คุณได้เปิดคอมขึ้นมา
+		ระบบ : คุณต้องการใช้คอมทำอะไร
+		do PlayerStatus.doActivity()
+		do PlayerStatus.doChatActivity()
+	=> ending
+- ไม่
+	=> ending
+
+~ ending
+set PlayerStatus.isOpenDialog = false
+=> END

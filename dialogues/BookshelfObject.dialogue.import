@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b15k8mo7psa4g"
+path="res://.godot/imported/BookshelfObject.dialogue-d4248f224c7eb90f017f04d6e439a20e.tres"
+
+[deps]
+
+source_file="res://dialogues/BookshelfObject.dialogue"
+dest_files=["res://.godot/imported/BookshelfObject.dialogue-d4248f224c7eb90f017f04d6e439a20e.tres"]
+
+[params]
+
+defaults=true

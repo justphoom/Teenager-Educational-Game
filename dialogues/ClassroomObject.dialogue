@@ -1,0 +1,15 @@
+~ classroom_object
+set PlayerStatus.isOpenDialog = true
+ระบบ: คุณอยู่ที่ ห้องเรียน
+ระบบ: คุณต้องการใช้บริการหรือไม่ ?
+- ใช่
+	ระบบ : คุณได้ใช้บริการ
+	do PlayerStatus.doClassroomActivity()
+	do PlayerStatus.doActivity()
+	=> ending
+- ไม่
+	=> ending
+
+~ ending
+set PlayerStatus.isOpenDialog = false
+=> END

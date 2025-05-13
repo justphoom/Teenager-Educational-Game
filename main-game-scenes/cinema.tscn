@@ -1,0 +1,150 @@
+[gd_scene load_steps=16 format=3 uid="uid://lmle5ckw4fss"]
+
+[ext_resource type="Script" path="res://main-game-scenes/cinema.gd" id="1_s64si"]
+[ext_resource type="Texture2D" uid="uid://8cx2xlu5eoas" path="res://assets/Cinema/CinemaInside.png" id="2_lfi6c"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://player/player.tscn" id="3_04xb0"]
+[ext_resource type="Texture2D" uid="uid://d18s8kp3tm6jw" path="res://assets/Cinema/Film - resized.png" id="4_g0eai"]
+[ext_resource type="Texture2D" uid="uid://05yt6kmobp1j" path="res://assets/Misc/GrowingSpot.png" id="5_pdo2l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_poc84"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_05jbp"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2q5rd"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fgny8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3k2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_du8jg"]
+size = Vector2(1123, 322.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbf1s"]
+size = Vector2(36.3333, 32.3333)
+
+[sub_resource type="Animation" id="Animation_re5v0"]
+resource_name = "CinemaAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_du2dv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tg3au"]
+_data = {
+"CinemaAnimation": SubResource("Animation_re5v0"),
+"RESET": SubResource("Animation_du2dv")
+}
+
+[node name="Cinema" type="Node2D"]
+script = ExtResource("1_s64si")
+
+[node name="Player" parent="." instance=ExtResource("3_04xb0")]
+position = Vector2(206, 721)
+scale = Vector2(0.72, 0.72)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(956, 520)
+scale = Vector2(1.18889, 1.18889)
+texture = ExtResource("2_lfi6c")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(67, 366)
+shape = SubResource("WorldBoundaryShape2D_poc84")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1840, 443)
+shape = SubResource("WorldBoundaryShape2D_05jbp")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(961, 360)
+shape = SubResource("WorldBoundaryShape2D_2q5rd")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(893, 908)
+shape = SubResource("WorldBoundaryShape2D_fgny8")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1140, 610)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(570, 270)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_t3k2u")
+
+[node name="Exit2" type="Area2D" parent="."]
+position = Vector2(140, 610)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit2"]
+position = Vector2(59, 273)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_t3k2u")
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(948.5, 730.25)
+shape = SubResource("RectangleShape2D_du8jg")
+
+[node name="Object" type="Node2D" parent="."]
+
+[node name="CinemaObject" type="Area2D" parent="Object"]
+position = Vector2(640, 360)
+
+[node name="CinemaArea" type="CollisionShape2D" parent="Object/CinemaObject"]
+position = Vector2(323.5, 134.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_tbf1s")
+
+[node name="CinemaItem" type="Node" parent="Object/CinemaObject"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/CinemaObject/CinemaItem"]
+libraries = {
+"": SubResource("AnimationLibrary_tg3au")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Object/CinemaObject/CinemaItem"]
+position = Vector2(971, 487)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_g0eai")
+
+[node name="TempGrowing" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="TempGrowing"]
+z_index = -1
+position = Vector2(964, 524)
+texture = ExtResource("5_pdo2l")
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
+[connection signal="body_entered" from="Exit2" to="." method="_on_exit_2_body_entered"]
+[connection signal="body_entered" from="Object/CinemaObject" to="Player" method="_on_cinema_object_body_entered"]
+[connection signal="body_exited" from="Object/CinemaObject" to="Player" method="_on_cinema_object_body_exited"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnnrjbvf0sexd"]
+
+[ext_resource type="Script" path="res://main-game-scenes/Ending.gd" id="1_0m2pj"]
+
+[node name="Ending" type="Node2D"]
+script = ExtResource("1_0m2pj")
+
+[node name="BackToMain" type="Button" parent="."]
+offset_left = 850.0
+offset_top = 500.0
+offset_right = 1010.0
+offset_bottom = 560.0
+scale = Vector2(1.5, 1.5)
+text = "เสร็จสิ้น"
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1000
+position = Vector2(960, 540)
+
+[connection signal="pressed" from="BackToMain" to="." method="_on_back_to_main_pressed"]

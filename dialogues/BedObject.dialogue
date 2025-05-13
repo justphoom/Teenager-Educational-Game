@@ -1,0 +1,14 @@
+~ bed_object
+set PlayerStatus.isOpenDialog = true
+ระบบ: คุณอยู่ที่ เตียง
+ระบบ: คุณต้องการใช้บริการหรือไม่ ?
+- ใช่
+	ระบบ : คุณได้ทำการนอน
+	do PlayerStatus.doSleepActivity()
+	=> ending
+- ไม่
+	=> ending
+
+~ ending
+set PlayerStatus.isOpenDialog = false
+=> END

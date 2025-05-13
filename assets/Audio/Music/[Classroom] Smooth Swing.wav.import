@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vsys7mx22hkc"
+path="res://.godot/imported/[Classroom] Smooth Swing.wav-4166e74d5afef5940f9141f13d273b2f.sample"
+
+[deps]
+
+source_file="res://assets/Audio/Music/[Classroom] Smooth Swing.wav"
+dest_files=["res://.godot/imported/[Classroom] Smooth Swing.wav-4166e74d5afef5940f9141f13d273b2f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,9 @@
+~ this_is_a_node_title
+set PlayerStatus.isOpenDialog = true
+ระบบ: ขณะนี้เป็นเวลานอน
+ระบบ: คุณต้องกลับไปที่บ้านเพื่อหลับพักผ่อน
+=> ending
+
+~ ending
+set PlayerStatus.isOpenDialog = false
+=> END

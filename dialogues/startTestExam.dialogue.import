@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bsuey45klx3tr"
+path="res://.godot/imported/startTestExam.dialogue-427c7f2400a36cb27f9b2b27e3ff867a.tres"
+
+[deps]
+
+source_file="res://dialogues/startTestExam.dialogue"
+dest_files=["res://.godot/imported/startTestExam.dialogue-427c7f2400a36cb27f9b2b27e3ff867a.tres"]
+
+[params]
+
+defaults=true

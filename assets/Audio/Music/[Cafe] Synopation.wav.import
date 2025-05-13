@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dy61g1wqyly6n"
+path="res://.godot/imported/[Cafe] Synopation.wav-41dbf22b04968092ab7932ae299c25c2.sample"
+
+[deps]
+
+source_file="res://assets/Audio/Music/[Cafe] Synopation.wav"
+dest_files=["res://.godot/imported/[Cafe] Synopation.wav-41dbf22b04968092ab7932ae299c25c2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

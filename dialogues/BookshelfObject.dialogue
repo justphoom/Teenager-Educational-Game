@@ -1,0 +1,14 @@
+~ bookshelf_object
+set PlayerStatus.isOpenDialog = true
+ระบบ: คุณอยู่ที่ ชั้นหนังสือ
+ระบบ: คุณต้องการใช้บริการหรือไม่ ?
+- ใช่
+	ระบบ : คุณได้ใช้บริการ
+	do PlayerStatus.doActivity()
+	do PlayerStatus.doBookshelfActivity()
+	=> ending
+- ไม่
+	=> ending
+~ ending
+set PlayerStatus.isOpenDialog = false
+=> END

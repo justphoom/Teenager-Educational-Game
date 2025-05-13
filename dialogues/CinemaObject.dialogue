@@ -1,0 +1,18 @@
+~ cinema_object
+set PlayerStatus.isOpenDialog = true
+ระบบ: คุณอยู่ที่ โรงหนัง
+ระบบ: คุณต้องการใช้บริการหรือไม่ ?
+- ใช่
+	if PlayerStatus.money >= Global.CinemaPrice:
+		ระบบ : คุณได้ใช้บริการ
+		do PlayerStatus.doActivity()
+		do PlayerStatus.doCinemaActivity()
+	else:
+		ระบบ : คุณมีเงินไม่พอ
+	=> ending
+- ไม่
+	=> ending
+
+~ ending
+set PlayerStatus.isOpenDialog = false
+=> END
