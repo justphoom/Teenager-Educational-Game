@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+จบโรงเรียน กลับบ้าน
+do Tutorial.day1_classroom_finished()
+set PlayerStatus.isOpenDialog = false
+=> END
+

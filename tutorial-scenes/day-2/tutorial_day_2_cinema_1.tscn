@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://dnebe8250ifsi"]
+
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://player/player.tscn" id="1_2yeww"]
+[ext_resource type="Script" path="res://tutorial-scenes/day-2/tutorial_day_2_cinema_1.gd" id="1_quvsx"]
+[ext_resource type="Texture2D" uid="uid://8cx2xlu5eoas" path="res://assets/Cinema/CinemaInside.png" id="2_gcg1h"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://global/glowing_spot.tscn" id="3_hvokm"]
+[ext_resource type="PackedScene" uid="uid://dr4s75qj6gsts" path="res://in-game-objects/cinema_object.tscn" id="4_dpicy"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="5_hlcpw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4p25c"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yetnc"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tptjs"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rxx6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drxta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrpym"]
+size = Vector2(1123, 322.5)
+
+[node name="Tutorial_Day2_Cinema_1" type="Node2D"]
+script = ExtResource("1_quvsx")
+
+[node name="Player" parent="." instance=ExtResource("1_2yeww")]
+position = Vector2(206, 721)
+scale = Vector2(0.72, 0.72)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(956, 520)
+scale = Vector2(1.18889, 1.18889)
+texture = ExtResource("2_gcg1h")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(67, 366)
+shape = SubResource("WorldBoundaryShape2D_4p25c")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1840, 443)
+shape = SubResource("WorldBoundaryShape2D_yetnc")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(961, 360)
+shape = SubResource("WorldBoundaryShape2D_tptjs")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(893, 908)
+shape = SubResource("WorldBoundaryShape2D_rxx6y")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1140, 610)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(570, 270)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_drxta")
+
+[node name="GlowingSpot_Exit" parent="." instance=ExtResource("3_hvokm")]
+position = Vector2(1707, 962)
+scale = Vector2(0.5, 0.5)
+
+[node name="Exit2" type="Area2D" parent="."]
+position = Vector2(140, 610)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit2"]
+position = Vector2(59, 273)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_drxta")
+
+[node name="GlowingSpot_Exit2" parent="." instance=ExtResource("3_hvokm")]
+position = Vector2(196, 959)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(948.5, 730.25)
+shape = SubResource("RectangleShape2D_mrpym")
+
+[node name="cinemaObject" parent="." instance=ExtResource("4_dpicy")]
+position = Vector2(973, 415)
+
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hlcpw")
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
+[connection signal="body_entered" from="Exit2" to="." method="_on_exit_2_body_entered"]

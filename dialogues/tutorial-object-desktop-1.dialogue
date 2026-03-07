@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ดูเหมือนว่า พรุ่งนี้เราต้องสอบวัดระดับ
+เราควรไป "พักผ่อน" เพื่อการสอบในพรุ่งนี้
+set PlayerStatus.isOpenDialog = false
+=> END

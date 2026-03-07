@@ -1,0 +1,105 @@
+[gd_scene load_steps=17 format=3 uid="uid://ca43r7bfhebux"]
+
+[ext_resource type="Script" path="res://tutorial-scenes/day-3/tutorial_day_3_bedroom_2.gd" id="1_5tqtr"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://player/player.tscn" id="1_wdcog"]
+[ext_resource type="Texture2D" uid="uid://dx1w5wykgl1iu" path="res://assets/Home/Home - Refined.png" id="2_0o77t"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://global/glowing_spot.tscn" id="3_kcuga"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="4_eya4v"]
+[ext_resource type="PackedScene" uid="uid://bqoa874lwsqi8" path="res://in-game-objects/bedroom_object.tscn" id="6_c7tn3"]
+[ext_resource type="PackedScene" uid="uid://v2gdnu3q1imd" path="res://in-game-objects/desktop_object.tscn" id="7_egdjt"]
+[ext_resource type="PackedScene" uid="uid://bqestje3yk27x" path="res://in-game-objects/tutorial_object.tscn" id="8_lwxyy"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yee5w"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qh6s8"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1wxsm"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iomo0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0awk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4avh"]
+size = Vector2(396.745, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58omn"]
+size = Vector2(352, 104.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1amn"]
+size = Vector2(237, 120)
+
+[node name="Tutorial_Day3_Bedroom_2" type="Node2D"]
+script = ExtResource("1_5tqtr")
+
+[node name="Player" parent="." instance=ExtResource("1_wdcog")]
+position = Vector2(1380, 700)
+scale = Vector2(0.9, 0.9)
+
+[node name="Background" type="StaticBody2D" parent="."]
+position = Vector2(4, 0)
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(870, 525)
+scale = Vector2(1.53565, 1.53565)
+texture = ExtResource("2_0o77t")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(223, 408)
+shape = SubResource("WorldBoundaryShape2D_yee5w")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1518, 502)
+shape = SubResource("WorldBoundaryShape2D_qh6s8")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(716, 225)
+shape = SubResource("WorldBoundaryShape2D_1wxsm")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(820, 984)
+shape = SubResource("WorldBoundaryShape2D_iomo0")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1034, 500)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(461, 230)
+scale = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_e0awk")
+
+[node name="GlowingSpot_Exit" parent="Exit" instance=ExtResource("3_kcuga")]
+position = Vector2(540, 230)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="Exit"]
+position = Vector2(-1030, -500)
+stream = ExtResource("4_eya4v")
+
+[node name="RoomObstacles" type="StaticBody2D" parent="."]
+position = Vector2(4, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomObstacles"]
+position = Vector2(1256.63, 346)
+shape = SubResource("RectangleShape2D_g4avh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RoomObstacles"]
+position = Vector2(421, 910.625)
+shape = SubResource("RectangleShape2D_58omn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RoomObstacles"]
+position = Vector2(867.5, 642)
+shape = SubResource("RectangleShape2D_c1amn")
+
+[node name="bedroomObject" parent="." instance=ExtResource("6_c7tn3")]
+position = Vector2(375, 330)
+
+[node name="desktopObject" parent="." instance=ExtResource("7_egdjt")]
+position = Vector2(1174, 229)
+
+[node name="tutorialObject" parent="." instance=ExtResource("8_lwxyy")]
+position = Vector2(870, 653)

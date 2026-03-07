@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ในวันสอบวัดระดับ
+กิจกรรมเดียวที่คุณทำได้ก็คือการสอบเท่านั้น
+ตอนนี้ก็ถึงเวลาเข้านอน
+do Tutorial.day4_to_sleep()
+set PlayerStatus.isOpenDialog = false
+=> END

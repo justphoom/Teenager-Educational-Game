@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://7mdjnd1c20rw"
+path="res://.godot/imported/tutorial-after-school-1.dialogue-e8796a7b6823eb818236ab76d195d583.tres"
+
+[deps]
+
+source_file="res://dialogues/tutorial-after-school-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-after-school-1.dialogue-e8796a7b6823eb818236ab76d195d583.tres"]
+
+[params]
+
+defaults=true

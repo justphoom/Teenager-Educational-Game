@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณได้อ่านตารางเวลาเรียบร้อยแล้ว
+หากคุณสงสัย คุณสามารถกลับมาที่ "โต๊ะ" เพื่อดูได้ตลอดเวลา
+ตอนนี้คุณล้าเต็มที่แล้ว คุณควรไป "เข้านอน"
+do Tutorial.day1_bedroom2_to_the_bed()
+set PlayerStatus.isOpenDialog = false
+=> END

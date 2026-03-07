@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คำอธิบาย คาเฟ่
+do Tutorial.day2_show_cafe()
+set PlayerStatus.isOpenDialog = false
+=> END

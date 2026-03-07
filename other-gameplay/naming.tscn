@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3rxjkudkn27t"]
+
+[ext_resource type="Script" path="res://other-gameplay/naming.gd" id="1_oxjle"]
+[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="2_go1ip"]
+[ext_resource type="Texture2D" uid="uid://cfdf3e7y2lk80" path="res://assets/Misc/ScorboardBackground.png" id="3_0yeri"]
+
+[node name="naming" type="Node2D"]
+script = ExtResource("1_oxjle")
+
+[node name="NameBox" type="Node2D" parent="."]
+
+[node name="Enter" type="Button" parent="NameBox"]
+offset_left = 1216.0
+offset_top = 467.0
+offset_right = 1305.0
+offset_bottom = 519.0
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 36
+text = "ตกลง"
+
+[node name="LineEdit" type="LineEdit" parent="NameBox"]
+offset_left = 770.0
+offset_top = 450.0
+offset_right = 1167.0
+offset_bottom = 540.0
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 48
+
+[node name="Label" type="Label" parent="NameBox"]
+offset_left = 776.0
+offset_top = 355.0
+offset_right = 1155.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 64
+text = "กรุณากรอกชื่อ"
+
+[node name="ConfirmBox" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="ConfirmBox"]
+offset_left = 745.0
+offset_top = 357.0
+offset_right = 1182.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 64
+text = "ยืนยันชื่อนี้หรือไม่"
+
+[node name="NameLabel" type="Label" parent="ConfirmBox"]
+offset_left = 750.0
+offset_top = 452.0
+offset_right = 1187.0
+offset_bottom = 536.0
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 64
+
+[node name="No" type="Button" parent="ConfirmBox"]
+offset_left = 773.0
+offset_top = 568.0
+offset_right = 874.0
+offset_bottom = 620.0
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 36
+text = "ยกเลิก"
+
+[node name="Yes" type="Button" parent="ConfirmBox"]
+offset_left = 1078.0
+offset_top = 566.0
+offset_right = 1167.0
+offset_bottom = 618.0
+theme_override_fonts/font = ExtResource("2_go1ip")
+theme_override_font_sizes/font_size = 36
+text = "ยืนยัน"
+
+[node name="ScheduleSprite" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(973.5, 497.5)
+scale = Vector2(0.685119, 0.867188)
+texture = ExtResource("3_0yeri")
+
+[connection signal="pressed" from="NameBox/Enter" to="." method="_on_enter_pressed"]
+[connection signal="pressed" from="ConfirmBox/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="ConfirmBox/Yes" to="." method="_on_yes_pressed"]

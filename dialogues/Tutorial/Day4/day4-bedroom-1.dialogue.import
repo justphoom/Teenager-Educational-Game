@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cgwd7mhklxrwa"
+path="res://.godot/imported/day4-bedroom-1.dialogue-07bdcdc56dd9f986c39cb350e475984c.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day4/day4-bedroom-1.dialogue"
+dest_files=["res://.godot/imported/day4-bedroom-1.dialogue-07bdcdc56dd9f986c39cb350e475984c.tres"]
+
+[params]
+
+defaults=true

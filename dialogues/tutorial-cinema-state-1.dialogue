@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณมาถึง "โรงภาพยนต์" เป็นที่เรียบร้อย
+ลองไปรับชมภาพยนต์ดูสิ
+do Tutorial.day2_show_cinema_object()
+set PlayerStatus.isOpenDialog = false
+=> END

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://biw0blnqru7rl"]
+[gd_scene load_steps=21 format=3 uid="uid://biw0blnqru7rl"]
 
 [ext_resource type="Script" path="res://main-game-scenes/classroom.gd" id="1_ub54e"]
 [ext_resource type="Texture2D" uid="uid://8033001fsvuh" path="res://assets/Classroom/ClassroomEmpty.png" id="2_f71ih"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://d1gdnru5al6nh" path="res://assets/Classroom/Bookcase - resized.png" id="4_gsfrc"]
 [ext_resource type="Texture2D" uid="uid://ces2inwtwoc8m" path="res://assets/Classroom/ClassroomTableOne.png" id="4_kfp3k"]
 [ext_resource type="Texture2D" uid="uid://28ndeyf6pcvu" path="res://assets/Classroom/ClassroomChairOne.png" id="5_pkgr6"]
-[ext_resource type="Texture2D" uid="uid://b16ydebpb3h0i" path="res://assets/Classroom/Study - resized.png" id="7_f2cke"]
-[ext_resource type="Texture2D" uid="uid://cv62t3onp2vlu" path="res://assets/Classroom/Books Extra - resized.png" id="8_niixt"]
-[ext_resource type="Texture2D" uid="uid://05yt6kmobp1j" path="res://assets/Misc/GrowingSpot.png" id="9_lu7nn"]
+[ext_resource type="PackedScene" uid="uid://ucqu0png0v8f" path="res://in-game-objects/bookshelf_object.tscn" id="8_frpaj"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://global/glowing_spot.tscn" id="9_4c8fa"]
+[ext_resource type="PackedScene" uid="uid://dspwjh3xjua3l" path="res://in-game-objects/classroom_object.tscn" id="9_lnsvy"]
+[ext_resource type="PackedScene" uid="uid://bog7fp6mdkunj" path="res://in-game-objects/friend_object.tscn" id="10_4cp80"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="10_s2s4a"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l4que"]
 normal = Vector2(1, 0)
@@ -28,124 +30,13 @@ size = Vector2(20, 8)
 size = Vector2(232, 112.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_excpe"]
-size = Vector2(232, 288)
+size = Vector2(119, 513)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrms4"]
 size = Vector2(93.25, 352.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ertrf"]
 size = Vector2(336, 63.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri2lf"]
-
-[sub_resource type="Animation" id="Animation_qt2ns"]
-resource_name = "ClassroomAnimation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
-}
-
-[sub_resource type="Animation" id="Animation_qnff2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_pudbv"]
-resource_name = "ClassroomGrowingAnimation"
-length = 0.4
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.419608)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1qm0"]
-_data = {
-"ClassroomAnimation": SubResource("Animation_qt2ns"),
-"ClassroomGrowingAnimation": SubResource("Animation_pudbv"),
-"RESET": SubResource("Animation_qnff2")
-}
-
-[sub_resource type="Animation" id="Animation_h8gcm"]
-resource_name = "BookshelfAnimation"
-loop_mode = 2
-
-[sub_resource type="Animation" id="Animation_rcxrp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_1m5km"]
-resource_name = "GrowingAnimation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.270588)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_r7m5y"]
-_data = {
-"BookshelfAnimation": SubResource("Animation_h8gcm"),
-"GrowingAnimation": SubResource("Animation_1m5km"),
-"RESET": SubResource("Animation_rcxrp")
-}
 
 [node name="Classroom" type="Node2D"]
 script = ExtResource("1_ub54e")
@@ -187,6 +78,10 @@ position = Vector2(271, 269)
 scale = Vector2(8, 1)
 shape = SubResource("RectangleShape2D_whuql")
 
+[node name="GlowingSpot_Exit" parent="." instance=ExtResource("9_4c8fa")]
+position = Vector2(912, 1005)
+scale = Vector2(0.5, 0.5)
+
 [node name="StaticObject" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
@@ -194,7 +89,7 @@ position = Vector2(902, 515.25)
 shape = SubResource("RectangleShape2D_0m4yb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticObject"]
-position = Vector2(1356, 793)
+position = Vector2(1412.5, 680.5)
 shape = SubResource("RectangleShape2D_excpe")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticObject"]
@@ -222,81 +117,19 @@ position = Vector2(539, 762)
 scale = Vector2(1.36306, 1.36306)
 texture = ExtResource("4_gsfrc")
 
-[node name="Object" type="Node2D" parent="."]
+[node name="bookshelfObject" parent="." instance=ExtResource("8_frpaj")]
+position = Vector2(552, 774)
 
-[node name="ClassroomObject" type="Area2D" parent="Object"]
-position = Vector2(640, 360)
+[node name="classroomObject" parent="." instance=ExtResource("9_lnsvy")]
+position = Vector2(905, 491)
 
-[node name="ClassroomArea" type="CollisionShape2D" parent="Object/ClassroomObject"]
-position = Vector2(262, 268)
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_ri2lf")
+[node name="friendObject" parent="." instance=ExtResource("10_4cp80")]
+position = Vector2(1289, 801)
+scale = Vector2(0.235, 0.235)
 
-[node name="ClassroomObject" type="Node" parent="Object/ClassroomObject"]
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_s2s4a")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/ClassroomObject/ClassroomObject"]
-libraries = {
-"": SubResource("AnimationLibrary_j1qm0")
-}
-
-[node name="Sprite2D" type="Sprite2D" parent="Object/ClassroomObject/ClassroomObject"]
-position = Vector2(904, 484)
-texture = ExtResource("7_f2cke")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Object/ClassroomObject/ClassroomObject"]
-z_index = -1
-position = Vector2(891, 576)
-scale = Vector2(1.6278, 1.92222)
-texture = ExtResource("9_lu7nn")
-
-[node name="FriendObject" type="Area2D" parent="Object"]
-position = Vector2(920, 580)
-
-[node name="FriendArea" type="CollisionShape2D" parent="Object/FriendObject"]
-position = Vector2(257, 225)
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_ri2lf")
-
-[node name="FriendObject" type="Node" parent="Object/FriendObject"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Object/FriendObject/FriendObject"]
-position = Vector2(1310, 760)
-scale = Vector2(0.24, 0.24)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Object/FriendObject/FriendObject"]
-z_index = -1
-position = Vector2(1312, 806)
-texture = ExtResource("9_lu7nn")
-
-[node name="BookshelfObject" type="Area2D" parent="Object"]
-position = Vector2(320, 600)
-
-[node name="BookshelfArea" type="CollisionShape2D" parent="Object/BookshelfObject"]
-position = Vector2(173, 180)
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_ri2lf")
-
-[node name="ClassroomObject" type="Node" parent="Object/BookshelfObject"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/BookshelfObject/ClassroomObject"]
-libraries = {
-"": SubResource("AnimationLibrary_r7m5y")
-}
-
-[node name="Sprite2D" type="Sprite2D" parent="Object/BookshelfObject/ClassroomObject"]
-position = Vector2(501, 755)
-texture = ExtResource("8_niixt")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Object/BookshelfObject/ClassroomObject"]
-z_index = -2
-position = Vector2(496, 791)
-scale = Vector2(1.06313, 1.30417)
-texture = ExtResource("9_lu7nn")
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
-[connection signal="body_entered" from="Object/ClassroomObject" to="Player" method="_on_classroom_object_body_entered"]
-[connection signal="body_exited" from="Object/ClassroomObject" to="Player" method="_on_classroom_object_body_exited"]
-[connection signal="body_entered" from="Object/FriendObject" to="Player" method="_on_friend_object_body_entered"]
-[connection signal="body_exited" from="Object/FriendObject" to="Player" method="_on_friend_object_body_exited"]
-[connection signal="body_entered" from="Object/BookshelfObject" to="Player" method="_on_bookshelf_object_body_entered"]
-[connection signal="body_exited" from="Object/BookshelfObject" to="Player" method="_on_bookshelf_object_body_exited"]

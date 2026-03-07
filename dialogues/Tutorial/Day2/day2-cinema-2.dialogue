@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คำอธิบาย โรงหนัง
+do Tutorial.day2_show_cinema()
+set PlayerStatus.isOpenDialog = false
+=> END

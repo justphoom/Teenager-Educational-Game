@@ -1,0 +1,4 @@
+~ start
+เริ่มเข้าเกม
+do Global.character_selection_show_character()
+=> END

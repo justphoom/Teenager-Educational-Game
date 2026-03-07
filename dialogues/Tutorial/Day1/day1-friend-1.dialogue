@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มคุยกับเพื่อน
+แนะนำตัว + ระบบแนะนำตัว
+do Tutorial.day1_friend_naming()
+=> END
+

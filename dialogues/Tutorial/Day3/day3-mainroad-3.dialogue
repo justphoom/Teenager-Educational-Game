@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ถึงเวลาเย็นแล้ว เราต้องกลับบ้าน
+do Tutorial.day3_mainroad_3_show_bedroom()
+set PlayerStatus.isOpenDialog = false
+=> END
+

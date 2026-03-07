@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มเข้าโรงเรียน
+ให้เข้าไปหาเพื่อน
+set PlayerStatus.isOpenDialog = false
+=> END

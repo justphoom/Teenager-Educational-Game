@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+นอกจากนี้ ยังสามารถเลือกที่จะผ่อนคลายด้วยการ
+รับชมภาพยนต์ที่ "โรงภาพยนต์"
+set PlayerStatus.isOpenDialog = false
+=> END

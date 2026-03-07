@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+อย่าลืมว่า ทุกกิจกรรมนั้นใช้เวลา
+ตอนนี้ก็ถึงเวลาเข้านอนแล้ว
+เราควรจะกลับ "บ้าน"
+set PlayerStatus.isOpenDialog = false
+=> END

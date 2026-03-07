@@ -1,7 +1,6 @@
-[gd_scene load_steps=82 format=3 uid="uid://dylfosr4mmrb6"]
+[gd_scene load_steps=83 format=3 uid="uid://dylfosr4mmrb6"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_3jgsf"]
-[ext_resource type="PackedScene" uid="uid://w7sv7juoideo" path="res://player/StatusTab.tscn" id="2_68qxi"]
 [ext_resource type="Texture2D" uid="uid://d2d3vo0mg2b2t" path="res://assets/MainCharacter/Girl/Down/Down1.png" id="2_cs83a"]
 [ext_resource type="Texture2D" uid="uid://dnxjwy4usjf10" path="res://assets/MainCharacter/Boy/Down/Down1.png" id="2_w7bk0"]
 [ext_resource type="Texture2D" uid="uid://cqqiyxnmusgro" path="res://assets/MainCharacter/Joystick/joyknobpng.png" id="3_hcr45"]
@@ -79,6 +78,8 @@
 [ext_resource type="Texture2D" uid="uid://d4ftbr6pdd1t4" path="res://assets/MainCharacter/Girl/Up/Up4.png" id="72_lvvmy"]
 [ext_resource type="Texture2D" uid="uid://bnyjt1uulgw4q" path="res://assets/MainCharacter/Girl/Up/Up5.png" id="73_j23ix"]
 [ext_resource type="Texture2D" uid="uid://cegucgds2wnuj" path="res://assets/MainCharacter/Girl/Up/Up6.png" id="74_6ct6q"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://global/glowing_spot.tscn" id="80_8vefd"]
+[ext_resource type="PackedScene" uid="uid://bd2lxvcx4c02m" path="res://player/timeDisplay.tscn" id="80_xhayk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kn1q0"]
 animations = [{
@@ -411,9 +412,6 @@ height = 215.714
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_3jgsf")
 
-[node name="StatusTab" parent="." instance=ExtResource("2_68qxi")]
-visible = false
-
 [node name="PlayerCharacter" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_kn1q0")
@@ -456,38 +454,6 @@ offset_bottom = 10170.9
 scale = Vector2(24, 24)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="Interact" type="Node2D" parent="Joystick"]
-position = Vector2(896, 0)
-scale = Vector2(0.07, 0.07)
-
-[node name="InteractSprite" type="Sprite2D" parent="Joystick/Interact"]
-position = Vector2(9445.71, 13088.6)
-texture = ExtResource("3_hcr45")
-
-[node name="InteractLabel" type="Label" parent="Joystick/Interact"]
-offset_left = 8588.57
-offset_top = 12745.7
-offset_right = 10295.6
-offset_bottom = 13429.7
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_icnok")
-theme_override_font_sizes/font_size = 480
-text = "ใช้สิ่งของ"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="InteractButton" type="Button" parent="Joystick/Interact"]
-modulate = Color(1, 1, 1, 0)
-offset_left = 8545.71
-offset_top = 12174.6
-offset_right = 8619.71
-offset_bottom = 12250.6
-scale = Vector2(24, 24)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
 [node name="Joycon" type="Node2D" parent="Joystick"]
 position = Vector2(202, 879)
 script = ExtResource("5_mvkea")
@@ -509,7 +475,13 @@ offset_right = 94.0
 offset_bottom = 96.0
 metadata/_edit_use_anchors_ = true
 
+[node name="GlowingSpot_Player" parent="." instance=ExtResource("80_8vefd")]
+z_index = -1
+position = Vector2(0, 124.286)
+scale = Vector2(0.4, 0.4)
+
+[node name="TimeDisplay" parent="." instance=ExtResource("80_xhayk")]
+
 [connection signal="pressed" from="Joystick/Stats/StatsButton" to="." method="_on_stats_button_pressed"]
-[connection signal="pressed" from="Joystick/Interact/InteractButton" to="." method="_on_interact_button_pressed"]
 [connection signal="button_down" from="Joystick/Joycon/Button" to="Joystick/Joycon/Joyknob" method="_on_button_button_down"]
 [connection signal="button_up" from="Joystick/Joycon/Button" to="Joystick/Joycon/Joyknob" method="_on_button_button_up"]

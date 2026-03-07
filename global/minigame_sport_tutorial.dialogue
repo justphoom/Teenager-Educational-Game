@@ -1,0 +1,10 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+วิธีการเล่น Sport
+เกมนี้จะจำลองการยิงจุดโทษของเกมฟุตบอล
+ใช้ปุ่มยิงทางด้านขวาเพื่อเตะลูกบอลเข้าประตู
+หากยิงเข้าก็จะได้รับรางวัล
+และถ้าคุณเล่นในโหมดท้าทาย ของรางวัลก็จะมากขึ้น
+do Tutorial.show_sport_play_button()
+set PlayerStatus.isOpenDialog = false
+=> END

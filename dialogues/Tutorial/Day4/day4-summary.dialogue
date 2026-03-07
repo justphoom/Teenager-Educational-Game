@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+สรุปวันที่ 4
+จบการสอนเล่น
+เข้าสู่เกมจริง
+set PlayerStatus.isOpenDialog = false
+=> END

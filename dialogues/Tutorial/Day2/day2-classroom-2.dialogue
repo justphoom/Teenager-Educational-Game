@@ -1,0 +1,5 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+หลังจากเปิดชั้นหนังสือ
+set PlayerStatus.isOpenDialog = false
+=> END

@@ -1,0 +1,5 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ให้ลองไปดูที่โต๊ะคอม
+set PlayerStatus.isOpenDialog = false
+=> END

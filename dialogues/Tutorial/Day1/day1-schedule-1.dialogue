@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ที่โต๊ะ สามารถดูตารางเวลาได้
+do Tutorial.day1_bedroom2_show_schedule()
+set PlayerStatus.isOpenDialog = false
+=> END
+

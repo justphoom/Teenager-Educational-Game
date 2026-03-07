@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bq1613uoc0858"
+path="res://.godot/imported/tutorial-day3-to-sport.dialogue-504e95b0e1de034285eef362f5af0caf.tres"
+
+[deps]
+
+source_file="res://dialogues/tutorial-day3-to-sport.dialogue"
+dest_files=["res://.godot/imported/tutorial-day3-to-sport.dialogue-504e95b0e1de034285eef362f5af0caf.tres"]
+
+[params]
+
+defaults=true

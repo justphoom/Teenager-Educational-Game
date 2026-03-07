@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bmv4cv7ld5vxx"
+path="res://.godot/imported/day1-classroom-4.dialogue-e0cec93bbe334c4cf23c0284285658e7.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day1/day1-classroom-4.dialogue"
+dest_files=["res://.godot/imported/day1-classroom-4.dialogue-e0cec93bbe334c4cf23c0284285658e7.tres"]
+
+[params]
+
+defaults=true

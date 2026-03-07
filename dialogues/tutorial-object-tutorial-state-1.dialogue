@@ -1,0 +1,10 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+do Tutorial.hide_tutorial_done_button()
+สถานที่ต่างๆ จะมีเวลาทำการที่แตกต่างกัน
+คุณสามารถเข้ามาดูตารางทำการที่นี้ได้ตลอด
+do Tutorial.set_tutorial_object_inactive()
+do Tutorial.show_tutorial_done_button()
+#do Tutorial.set_show_bedrrom_object()
+set PlayerStatus.isOpenDialog = false
+=> END

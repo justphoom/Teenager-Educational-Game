@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://df3s6b6hyrsls"
+path="res://.godot/imported/tutorial-error.dialogue-f90d135bd282efed720ad841989cfe82.tres"
+
+[deps]
+
+source_file="res://dialogues/tutorial-error.dialogue"
+dest_files=["res://.godot/imported/tutorial-error.dialogue-f90d135bd282efed720ad841989cfe82.tres"]
+
+[params]
+
+defaults=true

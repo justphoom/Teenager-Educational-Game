@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ไปที่ ชั้นหนังสือ
+set PlayerStatus.isOpenDialog = false
+=> END
+

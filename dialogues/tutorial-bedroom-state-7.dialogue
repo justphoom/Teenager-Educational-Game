@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณตื่นนอนแล้ว และวันนี้ก็เป็นวันสอบ
+กรุณาไปที่ "โรงเรียน" เพื่อทำการสอบ
+do Tutorial.day4_show_exit()
+set PlayerStatus.isOpenDialog = false
+=> END

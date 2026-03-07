@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+หลังจากที่คุณออกไปทำกิจกรรมมาทั้งวัน
+ตอนนี้ก็ถึงเวลาเข้านอน
+#do Tutorial.day2_go_to_bed()
+set PlayerStatus.isOpenDialog = false
+=> END

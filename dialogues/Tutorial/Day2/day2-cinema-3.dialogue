@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+
+หลังจากโรงหนัง
+set PlayerStatus.isOpenDialog = false
+=> END
+

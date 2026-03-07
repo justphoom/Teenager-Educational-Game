@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ดูเหมือนจะมีเอกสารที่น่าสนใจวางอยู่
+ให้ลองไปดูที่ "โต๊ะ"
+do Tutorial.show_tutorial_object()
+set PlayerStatus.isOpenDialog = false
+=> END

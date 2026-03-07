@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณตื่นนอนแล้ว
+อย่าลืมว่าคุณเป็น "นักเรียน"
+คุณควรไปโรงเรียนในตอนเช้า
+do Tutorial.day2_show_exit()
+set PlayerStatus.isOpenDialog = false
+=> END

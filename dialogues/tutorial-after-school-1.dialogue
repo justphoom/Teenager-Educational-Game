@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณเสร็จจากธุระที่โรงเรียนแล้ว
+คุณควรกลับไปพักผ่อนที่ "บ้าน"
+set PlayerStatus.isOpenDialog = false
+=> END

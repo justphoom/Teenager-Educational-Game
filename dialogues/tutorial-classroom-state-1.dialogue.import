@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://beh7pi464dwtm"
+path="res://.godot/imported/tutorial-classroom-state-1.dialogue-7c23b1299881d2636f62a43f422aa3bf.tres"
+
+[deps]
+
+source_file="res://dialogues/tutorial-classroom-state-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-classroom-state-1.dialogue-7c23b1299881d2636f62a43f422aa3bf.tres"]
+
+[params]
+
+defaults=true

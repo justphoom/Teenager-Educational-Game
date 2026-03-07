@@ -1,0 +1,15 @@
+~ start
+if PlayerStatus.playerGender == "BOY" 
+	คุณได้เลือกเล่นเป็นผู้ชาย
+if PlayerStatus.playerGender == "GIRL"
+	คุณได้เลือกเล่นเป็นผู้หญิง
+ยืนยันหรือไม่
+- ใช่
+	ยืนยันการเลือกตัวละครเรียบร้อย
+	ยินดีต้อนรับเข้าสู่เกมนี้
+	do Global.character_selection_confirm()
+	=> END
+- ไม่
+	do Global.character_selection_cancel()
+	=> END
+=> END

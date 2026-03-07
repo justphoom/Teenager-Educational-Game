@@ -1,0 +1,26 @@
+[
+	{
+		"isPlayer": false,
+		"data": "test test dialog test 1"
+	},
+	{
+		"isPlayer": false,
+		"data": "test test dialog test 2"
+	},
+	{
+		"isPlayer": false,
+		"data": "test test dialog test 3"
+	},
+	{
+		"isPlayer": true,
+		"data": "dialog test 1"
+	},
+	{
+		"isPlayer": true,
+		"data": "dialog test 2"
+	},
+	{
+		"isPlayer": false,
+		"data": "test test dialog test 11"
+	}
+]

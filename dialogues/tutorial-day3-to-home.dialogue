@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+หลังจากเที่ยวเล่นทั้งวัน
+เราก็กลับ "บ้าน" กันเถอะ
+set PlayerStatus.isOpenDialog = false
+=> END

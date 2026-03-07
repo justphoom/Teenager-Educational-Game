@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://cxtor8838ysxq"]
+[gd_scene load_steps=15 format=3 uid="uid://cxtor8838ysxq"]
 
 [ext_resource type="Script" path="res://main-game-scenes/cafe.gd" id="1_e5k4x"]
 [ext_resource type="Texture2D" uid="uid://cx3f2worm20rh" path="res://assets/Cafe/CafeInside.png" id="2_nawoj"]
 [ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://player/player.tscn" id="3_dvdmb"]
-[ext_resource type="Texture2D" uid="uid://dpip282yelwhj" path="res://assets/Cafe/Bubble milk tea 2 brothers - resized.png" id="4_h503k"]
-[ext_resource type="Texture2D" uid="uid://05yt6kmobp1j" path="res://assets/Misc/GrowingSpot.png" id="5_1pup8"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://global/glowing_spot.tscn" id="5_axiam"]
+[ext_resource type="PackedScene" uid="uid://bole0hx265pqe" path="res://in-game-objects/cafe_object.tscn" id="5_tgecx"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="6_7xbgm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p0dq6"]
 normal = Vector2(1, 0)
@@ -27,22 +28,6 @@ size = Vector2(262, 210)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cwly"]
 size = Vector2(245, 168)
-
-[sub_resource type="Animation" id="Animation_186k6"]
-resource_name = "CafeAnimation"
-loop_mode = 2
-
-[sub_resource type="Animation" id="Animation_d0a7j"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4x1n"]
-_data = {
-"CafeAnimation": SubResource("Animation_186k6"),
-"RESET": SubResource("Animation_d0a7j")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pugsu"]
-size = Vector2(32.6667, 33)
 
 [node name="Cafe" type="Node2D"]
 script = ExtResource("1_e5k4x")
@@ -83,6 +68,10 @@ position = Vector2(409, 262)
 scale = Vector2(8, 1)
 shape = SubResource("RectangleShape2D_3b0yh")
 
+[node name="GlowingSpot_Exit" parent="." instance=ExtResource("5_axiam")]
+position = Vector2(1293, 952)
+scale = Vector2(0.6, 0.6)
+
 [node name="StaticObject" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
@@ -97,36 +86,12 @@ shape = SubResource("RectangleShape2D_6rt5y")
 position = Vector2(506.5, 418)
 shape = SubResource("RectangleShape2D_4cwly")
 
-[node name="Object" type="Node2D" parent="."]
+[node name="cafeObject" parent="." instance=ExtResource("5_tgecx")]
+position = Vector2(1207, 371)
 
-[node name="CafeObject" type="Area2D" parent="Object"]
-position = Vector2(680, 400)
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_7xbgm")
 
-[node name="CafeItem" type="Node" parent="Object/CafeObject"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Object/CafeObject/CafeItem"]
-libraries = {
-"": SubResource("AnimationLibrary_y4x1n")
-}
-
-[node name="Sprite2D" type="Sprite2D" parent="Object/CafeObject/CafeItem"]
-position = Vector2(1077, 391)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_h503k")
-
-[node name="BedArea" type="CollisionShape2D" parent="Object/CafeObject"]
-position = Vector2(400, 134.5)
-scale = Vector2(3, 3)
-shape = SubResource("RectangleShape2D_pugsu")
-
-[node name="TempGrowing" type="Node2D" parent="."]
-
-[node name="Sprite2D2" type="Sprite2D" parent="TempGrowing"]
-z_index = -1
-position = Vector2(1078.5, 546.75)
-scale = Vector2(1.29596, 1.23333)
-texture = ExtResource("5_1pup8")
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
-[connection signal="body_entered" from="Object/CafeObject" to="Player" method="_on_cafe_object_body_entered"]
-[connection signal="body_exited" from="Object/CafeObject" to="Player" method="_on_cafe_object_body_exited"]

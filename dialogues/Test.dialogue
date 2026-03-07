@@ -1,6 +1,0 @@
-~ this_is_a_node_title
-set PlayerStatus.isOpenDialog = true
-ระบบ: ทดสอบ
-~ ending
-set PlayerStatus.isOpenDialog = false
-=> END

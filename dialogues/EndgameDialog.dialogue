@@ -1,9 +1,0 @@
-~ this_is_a_node_title
-set PlayerStatus.isOpenDialog = true
-ระบบ: คุณได้เล่นเกมนี้จบทั้งหมดแล้ว
-ระบบ: เราจะพาคุณไปดูผลลัพธ์ของคุณ
-set PlayerStatus.isOpenDialog = false
-
-do PlayerStatus.goToEndGame()
-
-=> END

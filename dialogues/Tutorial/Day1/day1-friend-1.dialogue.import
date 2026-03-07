@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cpyeljcfwg4pl"
+path="res://.godot/imported/day1-friend-1.dialogue-080199e20a02b3d56dcf08ba5d2416b2.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day1/day1-friend-1.dialogue"
+dest_files=["res://.godot/imported/day1-friend-1.dialogue-080199e20a02b3d56dcf08ba5d2416b2.tres"]
+
+[params]
+
+defaults=true

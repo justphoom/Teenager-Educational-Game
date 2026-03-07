@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ให้ไปนอน
+set PlayerStatus.isOpenDialog = false
+=> END
+

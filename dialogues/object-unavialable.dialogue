@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ขณะนี้ไม่ใช่เวลาทำการ
+กรุณากลับมาใหม่ในภายหลัง
+set PlayerStatus.isOpenDialog = false
+=> END
+

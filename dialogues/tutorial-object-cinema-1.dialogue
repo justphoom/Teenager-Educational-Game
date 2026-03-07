@@ -1,0 +1,5 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณได้ รับชมภาพยนต์
+set PlayerStatus.isOpenDialog = false
+=> END

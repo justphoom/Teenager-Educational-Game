@@ -1,11 +1,8 @@
 extends Node
 
-var playerGender: String = 'BOY'
-var toMainroadFrom: String = ''
-
-var gameTime : int = 0
-var gameDate : int = 0
-var gameCycle : int = 0
+var playerName : String = 'ทดสอบชื่อที่แสดง'
+var playerGender: String = 'GIRL'
+var PREV_SCENE: String = ''
 
 var money : int = 50
 
@@ -21,15 +18,12 @@ var intelligentActivityScore : int = 0
 
 var isOpenDialog : bool = false
 
+var gameTime : int = 0
+var gameDate : int = 0
+var gameCycle : int = 0
 var attendance : int = 0
 var isAttendClass : bool = false
 var isHardExam : bool = false
-
-func _ready() -> void:
-	pass # Replace with function body.
-
-func _process(delta: float) -> void:
-	pass
 
 func doActivity():
 	print("do activity")
@@ -81,11 +75,12 @@ func doSportActivity():
 	self.physicalActivityScore += 2
 
 func checkAttendance():
-	if self.attendance < (Global.maxDatePerCycle/2):
-		isHardExam = true
-		print("this will be a hard exam")
-	else:
-		print("this will be not a hard exam")
+	pass
+	#if self.attendance < (Global.maxDatePerCycle/2):
+		#isHardExam = true
+		#print("this will be a hard exam")
+	#else:
+		#print("this will be not a hard exam")
 
 func doEndPhase():
 	self.isHardExam = false

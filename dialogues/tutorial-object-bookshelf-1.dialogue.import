@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://f024o8d4mhna"
+path="res://.godot/imported/tutorial-object-bookshelf-1.dialogue-ae025688ccb0c37db24f93c9da732482.tres"
+
+[deps]
+
+source_file="res://dialogues/tutorial-object-bookshelf-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-object-bookshelf-1.dialogue-ae025688ccb0c37db24f93c9da732482.tres"]
+
+[params]
+
+defaults=true

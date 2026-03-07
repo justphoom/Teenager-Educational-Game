@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ยินดีต้อนรับเข้าเกม
+ใช้ปุ่มบังคับทางด้านขวาเพื่อควบคุมตัวละคร
+ให้เดินออกจากบ้าน
+do Tutorial.day1_bedroom1_show_bedroom_exit()
+set PlayerStatus.isOpenDialog = false
+=> END

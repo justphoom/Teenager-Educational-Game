@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ดูเหมือนจะมีการแจ้งเตือนบางอย่าง
+ลองไปเช็คที่ "โต๊ะคอม" หน่อยสิ
+do Tutorial.day3_show_desktop()
+set PlayerStatus.isOpenDialog = false
+=> END

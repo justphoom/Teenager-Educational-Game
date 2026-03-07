@@ -1,6 +1,26 @@
 extends Node2D
 
+@onready var how_to_play_button = $"HowToPlay"
+@onready var how_to_play_glow = $"HowToPlay/GlowingSpot"
+
+@onready var start_button = $Start
+@onready var exit_button = $Exit
+
+@onready var bgmSound = $BGM
+func playBGM():
+	bgmSound.play()
+func _on_bgm_finished():
+	self.playBGM()
+
 func _ready() -> void:
+	if Tutorial.is_tutorial_state:
+		first_time_landing()
+		how_to_play_glow.setType(2)
+		start_button.hide()
+		exit_button.hide()
+	else:
+		how_to_play_glow.queue_free()
+	self.playBGM()
 	$Mode1.hide()
 	$Mode2.hide()
 
@@ -17,8 +37,12 @@ func _on_start_pressed() -> void:
 	$Exit.hide()
 
 func _on_exit_pressed() -> void:
-	PlayerStatus.toMainroadFrom = "sport"
-	get_tree().change_scene_to_file("res://main-game-scenes/mainroad.tscn")
+	if Tutorial.is_tutorial_state:
+		PlayerStatus.toMainroadFrom = "sport"
+		get_tree().change_scene_to_file("res://tutorial-scenes/tutorial-mainroad.tscn")
+	else:	
+		PlayerStatus.toMainroadFrom = "sport"
+		get_tree().change_scene_to_file("res://main-game-scenes/mainroad.tscn")
 
 func _on_mode_1_pressed() -> void:
 	MiniGameController.isHardMode = false
@@ -29,4 +53,9 @@ func _on_mode_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://mini-game-sport/sport_game.tscn")
 
 func _on_how_to_play_pressed() -> void:
-	pass # Replace with function body.
+	DialogueManager.show_dialogue_balloon(load("res://dialogues/minigame_sport_tutorial.dialogue"))
+	how_to_play_glow.hide()
+	how_to_play_button.hide()
+
+func first_time_landing():
+	DialogueManager.show_dialogue_balloon(load("res://dialogues/tutorial-minigame.dialogue"))

@@ -1,8 +1,0 @@
-~ tutorial_object
-set PlayerStatus.isOpenDialog = true
-ระบบ: วิธีเล่นแบบละเอียด
-=> ending
-
-~ ending
-set PlayerStatus.isOpenDialog = false
-=> END

@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+สมมติ: สวัสดีเราชื่อ ***ต้องเปลี่ยนในภายหลัง*** นะ
+สมมติ: ช่วยบอกชื่อให้เราหน่อยได้ไหม
+set Tutorial.set_friend_object_inactive()
+do Tutorial.show_naming_scene()
+=> END

@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณได้เข้ามาที่ห้องเรียนแล้ว
+เพื่อนของคุณรออยู่ที่นั่น
+เราควรเข้าไปทักทายพูดคุยกับเพื่อนนะ
+do Tutorial.show_friend_object()
+set PlayerStatus.isOpenDialog = false
+=> END

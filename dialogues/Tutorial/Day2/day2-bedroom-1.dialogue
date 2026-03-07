@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มวันที่ 2
+set PlayerStatus.isOpenDialog = false
+=> END
+

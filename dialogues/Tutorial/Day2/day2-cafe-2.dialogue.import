@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://nvdbqb1r508t"
+path="res://.godot/imported/day2-cafe-2.dialogue-3b1d9340f84565c1cf1872e69cf21407.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day2/day2-cafe-2.dialogue"
+dest_files=["res://.godot/imported/day2-cafe-2.dialogue-3b1d9340f84565c1cf1872e69cf21407.tres"]
+
+[params]
+
+defaults=true

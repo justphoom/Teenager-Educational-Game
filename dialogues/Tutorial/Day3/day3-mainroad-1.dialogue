@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มแรก เราจะลองไป Arcade
+do Tutorial.day3_mainroad_1_show_arcade()
+set PlayerStatus.isOpenDialog = false
+=> END
+

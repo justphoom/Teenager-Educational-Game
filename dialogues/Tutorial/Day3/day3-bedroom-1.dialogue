@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มวันที่ 3
+วันนี้เราจะ โดดเรียน
+set PlayerStatus.isOpenDialog = false
+=> END
+

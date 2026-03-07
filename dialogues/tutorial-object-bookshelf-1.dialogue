@@ -1,0 +1,10 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณเปิดหนังสืออ่านแล้วพบว่า
+การเรียนรู้นั้น มีอยู่ในทุกที่
+แต่คุณต้องไม่ลืมว่า
+หากอ่อนล้า ก็อย่าลืมหาเวลาพักผ่อนให้ตัวเอง
+ทำไมไม่ต้องไปผ่อนคลายดูบ้างล่ะ
+do Tutorial.day2_after_bookshelf_exit_classroom()
+set PlayerStatus.isOpenDialog = false
+=> END

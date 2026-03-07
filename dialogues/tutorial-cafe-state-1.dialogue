@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณมาถึงร้าน "คาเฟ่" เป็นที่เรียบร้อย
+ลองไปซื้อน้ำดูสิ
+do Tutorial.day2_show_cafe_object()
+set PlayerStatus.isOpenDialog = false
+=> END

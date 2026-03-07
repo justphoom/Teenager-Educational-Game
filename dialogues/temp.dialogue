@@ -1,0 +1,5 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+Temporaly Dialog
+set PlayerStatus.isOpenDialog = false
+=> END

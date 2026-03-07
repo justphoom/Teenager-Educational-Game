@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://2wgc3nar128o"
+path="res://.godot/imported/day1-schedule-1.dialogue-a0d84c3ab53983116fe5963a751f8aab.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day1/day1-schedule-1.dialogue"
+dest_files=["res://.godot/imported/day1-schedule-1.dialogue-a0d84c3ab53983116fe5963a751f8aab.tres"]
+
+[params]
+
+defaults=true

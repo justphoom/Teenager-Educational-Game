@@ -1,0 +1,11 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คุณได้รับสมุดบันทึก
+สมุดบันทึกจะบอกค่าสถานะ วันเวลา และข้อมูลที่คุณได้รับต่างๆ
+คุณสามารถเปิดดูได้ตลอดเวลา เพื่อช่วยเป็นตัวช่วยของคุณ
+อย่าลืมว่า ทุกกิจกรรมที่คุณทำ คุณจะต้องใช้ "เวลา" ไปกับสิ่งนั้น
+set Tutorial.isGetArchiveBook = true
+do Tutorial.show_status_tabs()
+do Tutorial.show_classroom_exit()
+set PlayerStatus.isOpenDialog = false
+=> END

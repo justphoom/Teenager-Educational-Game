@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ovkogf05bbq6"
+path="res://.godot/imported/tutorial-day3-to-home.dialogue-31fb6688f0849e7a01df24e918b61d71.tres"
+
+[deps]
+
+source_file="res://dialogues/tutorial-day3-to-home.dialogue"
+dest_files=["res://.godot/imported/tutorial-day3-to-home.dialogue-31fb6688f0849e7a01df24e918b61d71.tres"]
+
+[params]
+
+defaults=true

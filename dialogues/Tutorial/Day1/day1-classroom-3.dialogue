@@ -1,0 +1,9 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+แนะนำสมุดบันทึก
+ลองเปิดดูสิ ที่ปุ่มด้านขวาของหน้าจอ
+set Tutorial.isGetArchiveBook = true
+set Tutorial.isOpenArchiveFirstTime = true
+do Tutorial.day1_classroom_get_archive()
+=> END
+

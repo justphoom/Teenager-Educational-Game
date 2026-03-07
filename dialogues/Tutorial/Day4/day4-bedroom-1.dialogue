@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มวันที่ 4
+วันนี้วันสอบ
+do Tutorial.day4_bedroom_show_exit()
+set PlayerStatus.isOpenDialog = false
+=> END
+

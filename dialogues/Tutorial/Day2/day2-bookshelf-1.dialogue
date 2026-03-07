@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+คำอธิบาย ชั้นหนังสือ
+do Tutorial.day2_classroom_show_bookshelf()
+set PlayerStatus.isOpenDialog = false
+=> END
+

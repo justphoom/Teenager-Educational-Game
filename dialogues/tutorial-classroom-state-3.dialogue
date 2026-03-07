@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+วันนี้ เป็นวันสอบวัดผล
+กรุณาไปที่"โต๊ะเรียน"เพื่อทำการสอบ
+do Tutorial.day4_show_classroom()
+set PlayerStatus.isOpenDialog = false
+=> END

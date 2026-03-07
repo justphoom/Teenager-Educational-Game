@@ -9,7 +9,14 @@ var currentScore : int
 
 var hardMode : bool
 
+@onready var bgmSound = $BGM
+func playBGM():
+	bgmSound.play()
+func _on_bgm_finished():
+	self.playBGM()
+
 func _ready() -> void:
+	self.playBGM()
 	PlayerStatus.doSportActivity()
 	PlayerStatus.doActivity()
 	$FinishButton.hide()
@@ -27,8 +34,13 @@ func initNextBall():
 	add_child(ballObj)
 
 func _on_interact_button_pressed() -> void:
-	PlayerStatus.toMainroadFrom = "sport"
-	get_tree().change_scene_to_file("res://main-game-scenes/mainroad.tscn")
+	if Tutorial.is_tutorial_state:
+		PlayerStatus.PREV_SCENE = "sport"
+		ScenceTransition.change_scene("res://tutorial-scenes/day-3/tutorial_day_3_mainroad_3.tscn")
+	else:
+		Global.day_time_update()
+		PlayerStatus.PREV_SCENE = "sport"
+		ScenceTransition.change_scene("res://main-game-scenes/mainroad.tscn")
 
 func showFinishButton():
 	var moneyToEarn = 5 * self.currentScore

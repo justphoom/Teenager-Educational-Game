@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+เริ่มทำการสอบ
+สอบเสร็จแล้ว
+do Tutorial.day4_classroom_after_assessment()
+set PlayerStatus.isOpenDialog = false
+=> END
+

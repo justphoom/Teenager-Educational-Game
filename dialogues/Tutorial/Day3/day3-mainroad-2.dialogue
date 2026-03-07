@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ต่อมาเรา ลองไป สนามกีฬา
+do Tutorial.day3_mainroad_2_show_sport()
+set PlayerStatus.isOpenDialog = false
+=> END
+

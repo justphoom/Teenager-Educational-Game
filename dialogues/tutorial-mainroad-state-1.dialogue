@@ -1,0 +1,8 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ยอดเยี่ยมมาก!
+ในเมื่อเราเป็นนักเรียนมัธยมปลาย
+เราควรที่จะไป "โรงเรียน" อย่างสม่ำเสมอ
+do Tutorial.show_classroom_portal()
+set PlayerStatus.isOpenDialog = false
+=> END

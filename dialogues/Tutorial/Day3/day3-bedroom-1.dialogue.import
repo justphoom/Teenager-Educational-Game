@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://lh0yxd7jvqhg"
+path="res://.godot/imported/day3-bedroom-1.dialogue-3602b9630e4564ed556c9b8cc6606cb3.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day3/day3-bedroom-1.dialogue"
+dest_files=["res://.godot/imported/day3-bedroom-1.dialogue-3602b9630e4564ed556c9b8cc6606cb3.tres"]
+
+[params]
+
+defaults=true

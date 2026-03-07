@@ -1,0 +1,6 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+ขณะนี้เป็นเวลานอน
+กรุณากลับไปที่เตียง
+set PlayerStatus.isOpenDialog = false
+=> END

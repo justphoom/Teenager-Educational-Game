@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dh5cn8qnoqhrr"
+path="res://.godot/imported/day2-classroom-2.dialogue-3c1626c1729674908b19b0296043a4d3.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day2/day2-classroom-2.dialogue"
+dest_files=["res://.godot/imported/day2-classroom-2.dialogue-3c1626c1729674908b19b0296043a4d3.tres"]
+
+[params]
+
+defaults=true

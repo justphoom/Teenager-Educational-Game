@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://o8qgy68efjy6"]
+
+[ext_resource type="Script" path="res://mini-game-chat/chat_message.gd" id="1_2hqev"]
+[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="1_edkdl"]
+
+[node name="ChatMessage" type="Control"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.049
+offset_bottom = 2.08
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_2hqev")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.745
+offset_left = 124.0
+offset_top = 11.0
+offset_right = 263.0
+offset_bottom = 9.025
+grow_horizontal = 2
+scale = Vector2(0.84, 1)
+
+[node name="Name" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_edkdl")
+theme_override_font_sizes/font_size = 32
+text = "Test : "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_edkdl")
+theme_override_font_sizes/font_size = 32
+text = "Test"
+vertical_alignment = 1

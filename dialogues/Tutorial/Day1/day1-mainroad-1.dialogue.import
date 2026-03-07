@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ccoun1gy0r103"
+path="res://.godot/imported/day1-mainroad-1.dialogue-95971ab008b7e447770e5f651bf0f089.tres"
+
+[deps]
+
+source_file="res://dialogues/Tutorial/Day1/day1-mainroad-1.dialogue"
+dest_files=["res://.godot/imported/day1-mainroad-1.dialogue-95971ab008b7e447770e5f651bf0f089.tres"]
+
+[params]
+
+defaults=true

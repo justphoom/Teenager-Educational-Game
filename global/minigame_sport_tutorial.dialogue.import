@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cx63f5qdn4f1q"
+path="res://.godot/imported/minigame_sport_tutorial.dialogue-8f12df2c46cc51c6546008db21851098.tres"
+
+[deps]
+
+source_file="res://global/minigame_sport_tutorial.dialogue"
+dest_files=["res://.godot/imported/minigame_sport_tutorial.dialogue-8f12df2c46cc51c6546008db21851098.tres"]
+
+[params]
+
+defaults=true

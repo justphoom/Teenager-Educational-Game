@@ -1,0 +1,9 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+สมมติ: ยินดีที่ได้รู้จักนะ
+สมมติ: เราเป็นเพื่อนกันแล้ว
+สมมติ: ถ้ามีอะไรก็เข้ามาคุยกับเราได้นะ
+สมมติ: อย่าลืมไปเช็คของที่ "โต๊ะเรียน" ด้วยล่ะ
+do Tutorial.show_classroom_object()
+set PlayerStatus.isOpenDialog = false
+=> END

@@ -1,0 +1,7 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+นอกจากจะศึกษาในห้องเรียนตามปกติแล้ว
+คุณสามารถศึกษาเพิ่มเติมที่ "ชั้นหนังสือ" ได้อีกด้วย
+do Tutorial.day2_show_bookshelf()
+set PlayerStatus.isOpenDialog = false
+=> END

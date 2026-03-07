@@ -1,0 +1,10 @@
+~ start
+set PlayerStatus.isOpenDialog = true
+บางทีการทำอะไรก็ที่ไม่ตามกฎก็เป็นเรื่องน่าสนุก
+วันนี้เราจะมาลอง "โดดเรียน" กัน
+เราสามารถไปพักผ่อนโด้วยการทำกิจกรรมอื่น
+เช่นการไปเล่นที่ "ร้านเกมส์"
+หรือ ไปเล่นกีฬาที่ "สนามกีฬา"
+do Tutorial.day3_show_exit()
+set PlayerStatus.isOpenDialog = false
+=> END
