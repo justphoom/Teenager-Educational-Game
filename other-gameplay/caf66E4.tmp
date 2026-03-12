@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c86dd7yo5rfa5"]
+[gd_scene load_steps=5 format=3 uid="uid://c86dd7yo5rfa5"]
 
 [ext_resource type="Script" path="res://other-gameplay/cafe.gd" id="1_5mi6o"]
 [ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="1_argke"]
 [ext_resource type="Texture2D" uid="uid://cfdf3e7y2lk80" path="res://assets/Misc/ScorboardBackground.png" id="2_23n31"]
+[ext_resource type="PackedScene" uid="uid://dn2arx5dwtrun" path="res://other-gameplay/cafe_item.tscn" id="4_rohfh"]
 
 [node name="Cafe" type="CanvasLayer"]
 script = ExtResource("1_5mi6o")
@@ -46,7 +47,6 @@ offset_right = -1040.0
 offset_bottom = -360.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Background/Panel"]
 layout_mode = 1
@@ -56,6 +56,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
-metadata/_edit_use_anchors_ = true
+
+[node name="CafeItem" parent="Background/Panel/VBoxContainer" instance=ExtResource("4_rohfh")]
+layout_mode = 2
+
+[node name="CafeItem2" parent="Background/Panel/VBoxContainer" instance=ExtResource("4_rohfh")]
+layout_mode = 2
+
+[node name="CafeItem3" parent="Background/Panel/VBoxContainer" instance=ExtResource("4_rohfh")]
+layout_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="tree_exiting" from="Background/Panel/VBoxContainer/CafeItem" to="." method="_on_cafe_item_tree_exiting"]

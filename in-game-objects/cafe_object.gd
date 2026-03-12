@@ -5,7 +5,7 @@ extends Node2D
 var is_in_object_area: bool = false
 var is_active: bool = false
 
-var schedulePrefab = preload("res://other-gameplay/cafe.tscn")
+var cafe_window = preload("res://other-gameplay/cafe.tscn")
 
 var AVAILABILITY_LIST: Array[int] = [Global.GAME_TIME_MORNING, Global.GAME_TIME_AFTERNOON]
 
@@ -95,9 +95,11 @@ func cafe_object_interaction():
 			print("not avaiable")
 			DialogueManager.show_dialogue_balloon(load("res://dialogues/object-unavialable.dialogue"))
 			return
+		# TODO - add the cafe element
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/temp.dialogue"))
-		Global.day_time_update()
+		self.show_object()
+		#Global.day_time_update()
 
 func show_object():
-	var obj = schedulePrefab.instantiate()
+	var obj = cafe_window.instantiate()
 	add_child(obj)

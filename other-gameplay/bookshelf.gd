@@ -2,6 +2,9 @@ extends CanvasLayer
 
 func _ready() -> void:
 	PlayerStatus.isOpenDialog = true
+	
+#	TODO delete this later
+	Tutorial.is_tutorial_state = false
 
 func _on_button_pressed() -> void:
 	if Tutorial.is_tutorial_state:

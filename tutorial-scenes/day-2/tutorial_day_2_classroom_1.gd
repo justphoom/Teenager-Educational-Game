@@ -9,9 +9,10 @@ var isClosedBookshelf : bool = false
 
 func _ready() -> void:
 	Global.CURRENT_DAY = 1
-	DialogueManager.show_dialogue_balloon(load("res://dialogues/Tutorial/Day2/day2-classroom-1.dialogue"))
+	#DialogueManager.show_dialogue_balloon(load("res://dialogues/Tutorial/Day2/day2-classroom-1.dialogue"))
 	classroomObject.inactive_mode()
 	friendObject.inactive_mode()
+	DialogueManager.show_dialogue_balloon(load("res://dialogues/knowledge-present.dialogue"))
 
 func show_bookshelf() -> void:
 	bookshelfObject.show_object()

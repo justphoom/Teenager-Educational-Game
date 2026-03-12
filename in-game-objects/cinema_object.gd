@@ -92,8 +92,10 @@ func cinema_object_interaction():
 			print("not avaiable")
 			DialogueManager.show_dialogue_balloon(load("res://dialogues/object-unavialable.dialogue"))
 			return
+		# TODO - add the cinema element
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/temp.dialogue"))
-		Global.day_time_update()
+		self.show_object()
+		#Global.day_time_update()
 
 func show_object():
 	var obj = schedulePrefab.instantiate()

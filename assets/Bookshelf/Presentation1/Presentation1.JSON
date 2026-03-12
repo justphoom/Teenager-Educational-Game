@@ -1,0 +1,18 @@
+{
+    "contents": [
+        {
+            "img_path": "res://assets/Bookshelf/Presentation1/Slide1.PNG",
+            "texts": [
+                "Text1-1",
+                "Text1-2",
+                "Text1-3"
+            ]
+        },
+        {
+            "img_path": "res://assets/Bookshelf/Presentation1/Slide2.PNG",
+            "texts": [
+                "Text"
+            ]
+        }
+    ]
+}

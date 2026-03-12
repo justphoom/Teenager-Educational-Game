@@ -1,13 +1,13 @@
-extends Node2D
+extends Control
 
-@onready var line_edit: LineEdit = $NameBox/LineEdit
-@onready var name_text: Label = $ConfirmBox/NameLabel
-@onready var naming_scene: Node2D = $"."
+@onready var line_edit: LineEdit = $Background/Container/NameBox/HBoxContainer2/LineEdit
+@onready var name_text: Label = $Background/Container/ConfirmBox/NameLabel
+@onready var naming_scene: Control = $"."
 
-@onready var enter_button: Button = $"NameBox/Enter"
+@onready var enter_button: Button = $"Background/Container/NameBox/HBoxContainer/Enter"
 
-@onready var name_box: Node2D = $NameBox
-@onready var confirm_box: Node2D = $ConfirmBox
+@onready var name_box = $Background/Container/NameBox
+@onready var confirm_box = $Background/Container/ConfirmBox
 
 var textLength: int = 0
 var currText: String

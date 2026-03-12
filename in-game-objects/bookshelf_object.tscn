@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cqqiyxnmusgro" path="res://assets/MainCharacter/Joystick/joyknobpng.png" id="4_ih3br"]
 [ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="5_qhkh4"]
 
-[sub_resource type="Animation" id="Animation_0twt2"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_3540x"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -39,7 +38,8 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -20)]
 }
 
-[sub_resource type="Animation" id="Animation_3540x"]
+[sub_resource type="Animation" id="Animation_0twt2"]
+resource_name = "idle"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false

@@ -18,6 +18,10 @@ var isHitItem : bool = false
 var itemName : String = ""
 
 func _ready():
+	#Temporaly setting for Tutorial
+	# Tutorial.is_tutorial_state = false
+	# $TimeDisplay.hide()
+	self.isShowStatus = true
 	#hide stat tab before get the book
 	if !Tutorial.isGetArchiveBook:
 		$Joystick/Stats.hide()

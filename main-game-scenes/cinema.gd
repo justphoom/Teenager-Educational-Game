@@ -16,6 +16,9 @@ func _ready() -> void:
 	self.playBGM()
 	setPlayerPosition(PlayerStatus.PREV_SCENE)
 	
+#	TODO delete this after have done.
+	Global.CURRENT_TIME = 2
+	
 func setPlayerPosition(place: String) -> void:
 	var initPosition: Vector2
 	match place:

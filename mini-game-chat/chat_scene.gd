@@ -9,7 +9,7 @@ var chat_message_obj
 var interator : int
 var chat_log_json
 
-@onready var chat_screen : VBoxContainer = $Control/Panel/ScrollContainer/VBoxContainer
+@onready var chat_screen : VBoxContainer = $Panel/ScrollContainer/VBoxContainer
 @onready var next_button : Button = $Next
 @onready var done_button : Button = $Done
 

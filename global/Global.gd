@@ -60,3 +60,11 @@ func character_selection_cancel():
 func character_selection_confirm():
 	var CharacterSelectionScene = $"../CharacterSelection"
 	CharacterSelectionScene.start_game_confirmation()
+
+func ON_BUYING_CAFE_ITEM():
+	var CafeWindow = $"../Cafe/cafeObject/Cafe"
+	CafeWindow.closed_window()
+
+func ON_BUYING_CINEMA_ITEM():
+	var CinemaWindow = $"../Cinema/cinemaObject/Cinema"
+	CinemaWindow.closed_window()
