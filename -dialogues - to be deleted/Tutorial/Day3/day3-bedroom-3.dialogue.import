@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://fkqbimny4pt"
+path="res://.godot/imported/day3-bedroom-3.dialogue-3e8659706a3f326b870d2fca233f5efc.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day3/day3-bedroom-3.dialogue"
+dest_files=["res://.godot/imported/day3-bedroom-3.dialogue-3e8659706a3f326b870d2fca233f5efc.tres"]
+
+[params]
+
+defaults=true

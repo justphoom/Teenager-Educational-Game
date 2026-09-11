@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cbhi060k857jo"
+path="res://.godot/imported/tutorial-day2-after-cafe.dialogue-8d1941ef6184e25d173c9b599070a60e.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-day2-after-cafe.dialogue"
+dest_files=["res://.godot/imported/tutorial-day2-after-cafe.dialogue-8d1941ef6184e25d173c9b599070a60e.tres"]
+
+[params]
+
+defaults=true

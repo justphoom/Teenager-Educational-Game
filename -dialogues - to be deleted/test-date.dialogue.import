@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dl74icf17txj8"
+path="res://.godot/imported/test-date.dialogue-1d56a26744f9f9c32c2b2d98cdfac19b.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/test-date.dialogue"
+dest_files=["res://.godot/imported/test-date.dialogue-1d56a26744f9f9c32c2b2d98cdfac19b.tres"]
+
+[params]
+
+defaults=true

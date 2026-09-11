@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c4k8yt4cibh16"
+path="res://.godot/imported/day4-classroom-1.dialogue-4a900e424367a9ecfd6e9a2a850de320.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day4/day4-classroom-1.dialogue"
+dest_files=["res://.godot/imported/day4-classroom-1.dialogue-4a900e424367a9ecfd6e9a2a850de320.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://6mgbyigl0wja"
+path="res://.godot/imported/tutorial-cinema-state-1.dialogue-d4e31e741e359427d1fc9550980da4e2.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-cinema-state-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-cinema-state-1.dialogue-d4e31e741e359427d1fc9550980da4e2.tres"]
+
+[params]
+
+defaults=true

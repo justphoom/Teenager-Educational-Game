@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bll87ee0vtexc"
+path="res://.godot/imported/character-confirmation.dialogue-683ae1ac22af3235a0a26fa9bbe541cf.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/CharacterSelection/character-confirmation.dialogue"
+dest_files=["res://.godot/imported/character-confirmation.dialogue-683ae1ac22af3235a0a26fa9bbe541cf.tres"]
+
+[params]
+
+defaults=true

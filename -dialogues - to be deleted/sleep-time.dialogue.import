@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dppke4etbrtl4"
+path="res://.godot/imported/sleep-time.dialogue-a98efe3a4e3f4ef8c8372276a14e4d0b.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/sleep-time.dialogue"
+dest_files=["res://.godot/imported/sleep-time.dialogue-a98efe3a4e3f4ef8c8372276a14e4d0b.tres"]
+
+[params]
+
+defaults=true

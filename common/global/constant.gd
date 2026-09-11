@@ -1,0 +1,29 @@
+extends Node
+class_name CONSTANT
+
+enum CHARACTER_TYPE{
+	BOY,
+	GIRL
+}
+
+enum GAME_TIME {
+	MORNING,
+	AFTERNOON,
+	EVENING,
+	NIGHT
+}
+
+enum GAME_STAGE {
+	TUTORIAL,
+	CYCLE1,
+	CYCLE2,
+	CYCLE3
+}
+
+enum PLAYER_BEHAVIOR_SOCRE {
+	AWFUL,
+	BAD,
+	NORMAL,
+	GOOD,
+	EXCELLENT
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://xhri1ikrnaio"
+path="res://.godot/imported/first-landing.dialogue-b43e8cb81645a2df7a4899725d1235aa.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/CharacterSelection/first-landing.dialogue"
+dest_files=["res://.godot/imported/first-landing.dialogue-b43e8cb81645a2df7a4899725d1235aa.tres"]
+
+[params]
+
+defaults=true

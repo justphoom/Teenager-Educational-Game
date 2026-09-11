@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca5835drefp2l"]
+
+[ext_resource type="Script" path="res://features/objects/temp_object_action.gd" id="1_j3gcw"]
+
+[node name="TempObjectAction" type="CanvasLayer"]
+script = ExtResource("1_j3gcw")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 166.0
+offset_top = 138.0
+offset_right = 1764.0
+offset_bottom = 839.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "TEMPORALY ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "DONE"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

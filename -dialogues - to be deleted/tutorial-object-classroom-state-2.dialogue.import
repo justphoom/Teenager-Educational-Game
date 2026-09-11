@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b6bhook8sopwa"
+path="res://.godot/imported/tutorial-object-classroom-state-2.dialogue-1ac20178280635bff50a765fa06f8ff2.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-object-classroom-state-2.dialogue"
+dest_files=["res://.godot/imported/tutorial-object-classroom-state-2.dialogue-1ac20178280635bff50a765fa06f8ff2.tres"]
+
+[params]
+
+defaults=true

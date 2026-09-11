@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://btwshouife11n"
+path="res://.godot/imported/tutorial-minigame.dialogue-b95d424e5ffea5821125b3182e121181.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-minigame.dialogue"
+dest_files=["res://.godot/imported/tutorial-minigame.dialogue-b95d424e5ffea5821125b3182e121181.tres"]
+
+[params]
+
+defaults=true

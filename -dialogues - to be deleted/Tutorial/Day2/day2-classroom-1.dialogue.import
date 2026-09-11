@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cy1okjkuj2ppq"
+path="res://.godot/imported/day2-classroom-1.dialogue-6ceb99daa5c4877e44f0edfd1e376fb6.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day2/day2-classroom-1.dialogue"
+dest_files=["res://.godot/imported/day2-classroom-1.dialogue-6ceb99daa5c4877e44f0edfd1e376fb6.tres"]
+
+[params]
+
+defaults=true

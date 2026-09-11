@@ -1,0 +1,125 @@
+[gd_scene load_steps=19 format=3 uid="uid://2y8eg8eylyc"]
+
+[ext_resource type="Script" path="res://scenes/tutorials/day1/tutorial_day_1_classroom_1.gd" id="1_1f5q6"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="2_t2kgv"]
+[ext_resource type="Texture2D" uid="uid://8033001fsvuh" path="res://assets/Classroom/ClassroomEmpty.png" id="3_yerkb"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="4_pfbxm"]
+[ext_resource type="Texture2D" uid="uid://ces2inwtwoc8m" path="res://assets/Classroom/ClassroomTableOne.png" id="5_mghvh"]
+[ext_resource type="Texture2D" uid="uid://28ndeyf6pcvu" path="res://assets/Classroom/ClassroomChairOne.png" id="6_nc141"]
+[ext_resource type="Texture2D" uid="uid://d1gdnru5al6nh" path="res://assets/Classroom/Bookcase - resized.png" id="7_uxiew"]
+[ext_resource type="PackedScene" uid="uid://bog7fp6mdkunj" path="res://features/objects/friend/friend.tscn" id="8_r5lt0"]
+[ext_resource type="PackedScene" uid="uid://dspwjh3xjua3l" path="res://features/objects/classroom/classroom.tscn" id="9_isu0c"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0wu51"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1upl4"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m8y74"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_diqk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrasd"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f5vx"]
+size = Vector2(232, 112.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvg81"]
+size = Vector2(87, 526)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7owd"]
+size = Vector2(93.25, 352.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm7i1"]
+size = Vector2(336, 63.75)
+
+[node name="Tutorial_Day1_Classroom_1" type="Node2D"]
+script = ExtResource("1_1f5q6")
+
+[node name="Player" parent="." instance=ExtResource("2_t2kgv")]
+z_index = 10
+position = Vector2(909, 817)
+scale = Vector2(0.8, 0.8)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(914, 500)
+scale = Vector2(1.09444, 1.09444)
+texture = ExtResource("3_yerkb")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(335, 403)
+shape = SubResource("WorldBoundaryShape2D_0wu51")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1485, 471)
+shape = SubResource("WorldBoundaryShape2D_1upl4")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(898, 350)
+shape = SubResource("WorldBoundaryShape2D_m8y74")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(913, 964)
+shape = SubResource("WorldBoundaryShape2D_diqk0")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(640, 680)
+
+[node name="GlowingSpot_Exit" parent="Exit" instance=ExtResource("4_pfbxm")]
+position = Vector2(268, 318)
+scale = Vector2(0.4, 0.4)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(271, 269)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_mrasd")
+
+[node name="Obstacles" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(902, 515.25)
+shape = SubResource("RectangleShape2D_0f5vx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(1429, 692)
+shape = SubResource("RectangleShape2D_mvg81")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(383.375, 785.25)
+shape = SubResource("RectangleShape2D_a7owd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(567, 927.875)
+shape = SubResource("RectangleShape2D_cm7i1")
+
+[node name="Desk" type="Sprite2D" parent="Obstacles"]
+position = Vector2(904, 522)
+scale = Vector2(1.2625, 1.2625)
+texture = ExtResource("5_mghvh")
+
+[node name="Chair" type="Sprite2D" parent="Obstacles"]
+z_index = -5
+position = Vector2(900, 657)
+scale = Vector2(1.2125, 1.2125)
+texture = ExtResource("6_nc141")
+
+[node name="Bookshelf" type="Sprite2D" parent="Obstacles"]
+z_index = 20
+position = Vector2(539, 762)
+scale = Vector2(1.36306, 1.36306)
+texture = ExtResource("7_uxiew")
+
+[node name="friendObject" parent="." instance=ExtResource("8_r5lt0")]
+position = Vector2(1289, 801)
+scale = Vector2(0.235, 0.235)
+
+[node name="classroomObject" parent="." instance=ExtResource("9_isu0c")]
+position = Vector2(905, 467)
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

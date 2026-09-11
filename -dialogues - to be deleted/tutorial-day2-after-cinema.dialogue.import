@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c7dln1jyljhvk"
+path="res://.godot/imported/tutorial-day2-after-cinema.dialogue-faab621a52a7459df044eb19fdeedc36.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-day2-after-cinema.dialogue"
+dest_files=["res://.godot/imported/tutorial-day2-after-cinema.dialogue-faab621a52a7459df044eb19fdeedc36.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://d2sm3nmi8min"
+path="res://.godot/imported/init_objective.dialogue-233a99e9703188dd3ca403bc8f9dc678.tres"
+
+[deps]
+
+source_file="res://features/objects/init_objective.dialogue"
+dest_files=["res://.godot/imported/init_objective.dialogue-233a99e9703188dd3ca403bc8f9dc678.tres"]
+
+[params]
+
+defaults=true

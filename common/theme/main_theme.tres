@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bq6xvq1b1sckx"]
+
+[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="1_dc228"]
+[ext_resource type="Texture2D" uid="uid://bbb50jgrq54a5" path="res://assets/Misc/DialogueBox/Resized/DialogueResponseToggled.png" id="1_qg3ik"]
+[ext_resource type="Texture2D" uid="uid://dksdd01yblxk" path="res://assets/Misc/DialogueBox/Resized/DialoguePanel.png" id="1_ribwn"]
+[ext_resource type="Texture2D" uid="uid://d5qanh4bei03" path="res://assets/Misc/DialogueBox/ChoiceButton.PNG" id="3_btr2i"]
+[ext_resource type="Texture2D" uid="uid://bfvi1jjgs6jsp" path="res://assets/Misc/DialogueBox/Resized/DialogueResponse.png" id="3_l0f40"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rsq42"]
+texture = ExtResource("1_qg3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_720yg"]
+texture = ExtResource("3_l0f40")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4rj8w"]
+texture = ExtResource("3_l0f40")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uu7hh"]
+texture = ExtResource("3_l0f40")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyip3"]
+texture = ExtResource("3_btr2i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcil8"]
+texture = ExtResource("1_ribwn")
+texture_margin_left = 15.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 20.0
+
+[resource]
+default_font = ExtResource("1_dc228")
+Button/colors/font_color = Color(0.239466, 0.0792174, 0.0503445, 1)
+Button/colors/font_focus_color = Color(0.239216, 0.0784314, 0.0509804, 1)
+Button/colors/font_hover_color = Color(0.239216, 0.0784314, 0.0509804, 1)
+Button/colors/font_hover_pressed_color = Color(0.239216, 0.0784314, 0.0509804, 1)
+Button/colors/font_outline_color = Color(0.239216, 0.0784314, 0.0509804, 1)
+Button/colors/font_pressed_color = Color(0.239216, 0.0784314, 0.0509804, 1)
+Button/styles/disabled = SubResource("StyleBoxTexture_rsq42")
+Button/styles/focus = SubResource("StyleBoxTexture_720yg")
+Button/styles/hover = SubResource("StyleBoxTexture_4rj8w")
+Button/styles/normal = SubResource("StyleBoxTexture_uu7hh")
+Button/styles/pressed = SubResource("StyleBoxTexture_jyip3")
+Label/fonts/font = ExtResource("1_dc228")
+Panel/styles/panel = SubResource("StyleBoxTexture_vcil8")

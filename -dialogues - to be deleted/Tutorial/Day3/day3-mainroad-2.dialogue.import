@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dsgcrq8mqa5fk"
+path="res://.godot/imported/day3-mainroad-2.dialogue-6a6a245ae3371ef04a1075569e2dbe69.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day3/day3-mainroad-2.dialogue"
+dest_files=["res://.godot/imported/day3-mainroad-2.dialogue-6a6a245ae3371ef04a1075569e2dbe69.tres"]
+
+[params]
+
+defaults=true

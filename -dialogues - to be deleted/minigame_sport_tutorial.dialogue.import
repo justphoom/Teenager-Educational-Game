@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c61quidawxxhx"
+path="res://.godot/imported/minigame_sport_tutorial.dialogue-0dd000fe620758c01085c18253ec4e61.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/minigame_sport_tutorial.dialogue"
+dest_files=["res://.godot/imported/minigame_sport_tutorial.dialogue-0dd000fe620758c01085c18253ec4e61.tres"]
+
+[params]
+
+defaults=true

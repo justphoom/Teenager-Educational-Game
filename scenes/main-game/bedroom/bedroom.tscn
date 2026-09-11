@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=3 uid="uid://dk2xyt1rhah6g"]
+
+[ext_resource type="Script" path="res://scenes/main-game/bedroom/bedroom.gd" id="1_mikuj"]
+[ext_resource type="Texture2D" uid="uid://dx1w5wykgl1iu" path="res://assets/Home/Home - Refined.png" id="2_blw7n"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="3_qlnv8"]
+[ext_resource type="PackedScene" uid="uid://bqoa874lwsqi8" path="res://features/objects/bedroom/bedroom.tscn" id="4_dxgn2"]
+[ext_resource type="PackedScene" uid="uid://v2gdnu3q1imd" path="res://features/objects/desktop/desktop.tscn" id="5_g4mut"]
+[ext_resource type="PackedScene" uid="uid://bqestje3yk27x" path="res://features/objects/schedule/schedule.tscn" id="6_xqsls"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="7_eeygs"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="8_vhk8j"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n57ws"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cotg2"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0r8wl"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4ai7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pom7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oujpl"]
+size = Vector2(396.745, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf37n"]
+size = Vector2(352, 104.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdb75"]
+size = Vector2(237, 110)
+
+[node name="Bedroom" type="Node2D"]
+script = ExtResource("1_mikuj")
+
+[node name="Player" parent="." instance=ExtResource("3_qlnv8")]
+position = Vector2(650, 680)
+scale = Vector2(0.9, 0.9)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(870, 525)
+scale = Vector2(1.53565, 1.53565)
+texture = ExtResource("2_blw7n")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(223, 408)
+shape = SubResource("WorldBoundaryShape2D_n57ws")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1518, 502)
+shape = SubResource("WorldBoundaryShape2D_cotg2")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(716, 225)
+shape = SubResource("WorldBoundaryShape2D_0r8wl")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(820, 984)
+shape = SubResource("WorldBoundaryShape2D_4ai7l")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1030, 500)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(461, 230)
+scale = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_7pom7")
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(1256.63, 346)
+shape = SubResource("RectangleShape2D_oujpl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(421, 910.625)
+shape = SubResource("RectangleShape2D_rf37n")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(867.5, 647)
+shape = SubResource("RectangleShape2D_qdb75")
+
+[node name="GlowingSpot_Exit" parent="." instance=ExtResource("7_eeygs")]
+position = Vector2(1570, 730)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="bedroomObject" parent="." instance=ExtResource("4_dxgn2")]
+position = Vector2(375, 330)
+
+[node name="desktopObject" parent="." instance=ExtResource("5_g4mut")]
+position = Vector2(1174, 229)
+
+[node name="tutorialObject" parent="." instance=ExtResource("6_xqsls")]
+position = Vector2(870, 653)
+
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_vhk8j")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

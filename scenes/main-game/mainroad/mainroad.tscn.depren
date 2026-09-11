@@ -1,0 +1,200 @@
+[gd_scene load_steps=17 format=3 uid="uid://d4bu5crhlv3ax"]
+
+[ext_resource type="Script" path="res://scenes/main-game/mainroad/mainroad.gd" id="1_jknif"]
+[ext_resource type="Texture2D" uid="uid://mifo2nrrvr2h" path="res://assets/MainRoad/Main road - refined.png" id="2_rnrl8"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="3_sunry"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="4_w4i8f"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="5_rui5t"]
+[ext_resource type="Texture2D" uid="uid://nn4jmhf83w7r" path="res://assets/Misc/GrowingSpot_Yellow.png" id="6_uo810"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnyrp"]
+size = Vector2(29.5, 30)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4jcqn"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rbng2"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2lqts"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qgava"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5lt1"]
+size = Vector2(297, 175.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdhp8"]
+size = Vector2(316, 803)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8n01"]
+size = Vector2(740, 229.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wygpk"]
+size = Vector2(50, 532.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgkt8"]
+size = Vector2(727.5, 249)
+
+[node name="Mainroad" type="Node2D"]
+script = ExtResource("1_jknif")
+
+[node name="Sport" type="Node2D" parent="."]
+position = Vector2(1870, 930)
+
+[node name="GlowingSpot_Sport" parent="Sport" instance=ExtResource("4_w4i8f")]
+position = Vector2(13, 0)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="SportSign" type="Sprite2D" parent="Sport"]
+texture = ExtResource("6_uo810")
+
+[node name="SportPortal" type="Area2D" parent="Sport"]
+position = Vector2(-620, -310)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="Sport/SportPortal"]
+position = Vector2(624, 310)
+scale = Vector2(1.8, 6)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="Arcade" type="Node2D" parent="."]
+
+[node name="ArcadePortal" type="Area2D" parent="Arcade"]
+position = Vector2(660, 20)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="Arcade/ArcadePortal"]
+position = Vector2(330, 13)
+scale = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="ArcadeSign" type="Sprite2D" parent="Arcade"]
+position = Vector2(1000, 60)
+texture = ExtResource("6_uo810")
+
+[node name="GlowingSpot_Arcade" parent="Arcade" instance=ExtResource("4_w4i8f")]
+position = Vector2(1000, 35)
+scale = Vector2(0.6, 0.6)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(960, 540)
+texture = ExtResource("2_rnrl8")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(0, 360)
+shape = SubResource("WorldBoundaryShape2D_4jcqn")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1920, 417)
+shape = SubResource("WorldBoundaryShape2D_rbng2")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(640, 0)
+shape = SubResource("WorldBoundaryShape2D_2lqts")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(956, 1042)
+shape = SubResource("WorldBoundaryShape2D_qgava")
+
+[node name="Player" parent="." instance=ExtResource("3_sunry")]
+z_index = 5
+position = Vector2(1800, 930)
+
+[node name="BedroomPortal" type="Area2D" parent="."]
+position = Vector2(25, 620)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="BedroomPortal"]
+position = Vector2(5, 304)
+scale = Vector2(1.8, 6)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="CinemaPortal" type="Area2D" parent="."]
+position = Vector2(1120, 520)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="CinemaPortal"]
+position = Vector2(561, 267)
+scale = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="CinemaPortal2" type="Area2D" parent="."]
+position = Vector2(920, 520)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="CinemaPortal2"]
+position = Vector2(458, 275)
+scale = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="CafePortal" type="Area2D" parent="."]
+position = Vector2(1170, 180)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="CafePortal"]
+position = Vector2(608, 143)
+scale = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="ClassroomPortal" type="Area2D" parent="."]
+position = Vector2(300, 380)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="ClassroomPortal"]
+position = Vector2(148, 205)
+scale = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_hnyrp")
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="StaticBody2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(167.5, 723.75)
+shape = SubResource("RectangleShape2D_s5lt1")
+
+[node name="StaticBody2D2" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(726, 416)
+shape = SubResource("RectangleShape2D_xdhp8")
+
+[node name="StaticBody2D3" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(1469, 122.125)
+shape = SubResource("RectangleShape2D_h8n01")
+
+[node name="StaticBody2D4" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(1878, 444)
+shape = SubResource("RectangleShape2D_wygpk")
+
+[node name="StaticBody2D5" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(1474.75, 617.5)
+shape = SubResource("RectangleShape2D_fgkt8")
+
+[node name="GlowingSpot_Cafe" parent="." instance=ExtResource("4_w4i8f")]
+position = Vector2(1759, 326)
+scale = Vector2(0.4, 0.4)
+
+[node name="GlowingSpot_Classroom" parent="." instance=ExtResource("4_w4i8f")]
+position = Vector2(453, 582)
+scale = Vector2(0.6, 0.6)
+
+[node name="GlowingSpot_Cinema1" parent="." instance=ExtResource("4_w4i8f")]
+position = Vector2(1377, 787)
+scale = Vector2(0.4, 0.4)
+
+[node name="GlowingSpot_Cinema2" parent="." instance=ExtResource("4_w4i8f")]
+position = Vector2(1688, 794)
+scale = Vector2(0.4, 0.4)
+
+[node name="GlowingSpot_Home" parent="." instance=ExtResource("4_w4i8f")]
+position = Vector2(9.00006, 947)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_rui5t")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="Sport/SportPortal" to="." method="_on_sport_portal_body_entered"]
+[connection signal="body_entered" from="Arcade/ArcadePortal" to="." method="_on_arcade_portal_body_entered"]
+[connection signal="body_entered" from="BedroomPortal" to="." method="_on_bedroom_portal_body_entered"]
+[connection signal="body_entered" from="CinemaPortal" to="." method="_on_cinema_portal_body_entered"]
+[connection signal="body_entered" from="CinemaPortal2" to="." method="_on_cinema_portal_2_body_entered"]
+[connection signal="body_entered" from="CafePortal" to="." method="_on_cafe_portal_body_entered"]
+[connection signal="body_entered" from="ClassroomPortal" to="." method="_on_classroom_portal_body_entered"]

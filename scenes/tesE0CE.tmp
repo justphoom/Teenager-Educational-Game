@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl7krmkycxd3c"]
+
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="1_t6oix"]
+[ext_resource type="PackedScene" uid="uid://bqestje3yk27x" path="res://features/objects/schedule/schedule.tscn" id="2_w3233"]
+[ext_resource type="PackedScene" uid="uid://bog7fp6mdkunj" path="res://features/objects/friend/friend.tscn" id="3_lcfmv"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_t6oix")]
+position = Vector2(557, 538)
+
+[node name="Schedule" parent="." instance=ExtResource("2_w3233")]
+position = Vector2(205, 166)
+
+[node name="Friend" parent="." instance=ExtResource("3_lcfmv")]
+visible = false
+position = Vector2(1534, 307)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://diufjxynvyx4y"
+path="res://.godot/imported/day1-summary.dialogue-7327fceb16db5dc7bb59266cf0c37546.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day1/day1-summary.dialogue"
+dest_files=["res://.godot/imported/day1-summary.dialogue-7327fceb16db5dc7bb59266cf0c37546.tres"]
+
+[params]
+
+defaults=true

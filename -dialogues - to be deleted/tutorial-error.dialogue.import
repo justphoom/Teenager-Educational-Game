@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://df3s6b6hyrsls"
+path="res://.godot/imported/tutorial-error.dialogue-3627760fc63ed4733b28be3752f10b69.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-error.dialogue"
+dest_files=["res://.godot/imported/tutorial-error.dialogue-3627760fc63ed4733b28be3752f10b69.tres"]
+
+[params]
+
+defaults=true

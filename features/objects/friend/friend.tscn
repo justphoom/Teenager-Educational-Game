@@ -1,0 +1,181 @@
+[gd_scene load_steps=26 format=3 uid="uid://bog7fp6mdkunj"]
+
+[ext_resource type="Script" path="res://features/objects/friend/friend.gd" id="1_bfn73"]
+[ext_resource type="Texture2D" uid="uid://dnxjwy4usjf10" path="res://assets/MainCharacter/Boy/Down/Down1.png" id="2_rl673"]
+[ext_resource type="Texture2D" uid="uid://tr4q0ij1gk4p" path="res://assets/MainCharacter/Boy/Down/Down2.png" id="3_c33g1"]
+[ext_resource type="Texture2D" uid="uid://bd8x6ie56pguh" path="res://assets/MainCharacter/Boy/Down/Down3.png" id="4_sq5ok"]
+[ext_resource type="Texture2D" uid="uid://dl3da27psywro" path="res://assets/MainCharacter/Boy/Down/Down4.png" id="5_ahwd6"]
+[ext_resource type="Texture2D" uid="uid://e6du6s1itfqr" path="res://assets/MainCharacter/Boy/Down/Down5.png" id="6_okk4x"]
+[ext_resource type="Texture2D" uid="uid://uri7gl2cdr3a" path="res://assets/MainCharacter/Boy/Down/Down6.png" id="7_6jwxu"]
+[ext_resource type="Texture2D" uid="uid://d2d3vo0mg2b2t" path="res://assets/MainCharacter/Girl/Down/Down1.png" id="8_bxm0s"]
+[ext_resource type="Texture2D" uid="uid://dgeovsgqxuwuy" path="res://assets/MainCharacter/Girl/Down/Down2.png" id="9_ul2h6"]
+[ext_resource type="Texture2D" uid="uid://bgwb2nmurwvbe" path="res://assets/MainCharacter/Girl/Down/Down3.png" id="10_l027k"]
+[ext_resource type="Texture2D" uid="uid://c5sdyapydtems" path="res://assets/MainCharacter/Girl/Down/Down4.png" id="11_ysllg"]
+[ext_resource type="Texture2D" uid="uid://xatxuluynoxo" path="res://assets/MainCharacter/Girl/Down/Down5.png" id="12_wbodd"]
+[ext_resource type="Texture2D" uid="uid://d06kxmojs1ovl" path="res://assets/MainCharacter/Girl/Down/Down6.png" id="13_2bih4"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="14_4wo61"]
+[ext_resource type="Texture2D" uid="uid://cqqiyxnmusgro" path="res://assets/MainCharacter/Joystick/joyknobpng.png" id="15_88ab6"]
+[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="16_7if0p"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ggyep"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydirj"]
+size = Vector2(382, 837)
+
+[sub_resource type="Animation" id="Animation_ep0h1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rl673")]
+}
+
+[sub_resource type="Animation" id="Animation_w5fin"]
+resource_name = "active_boy"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_rl673"), ExtResource("3_c33g1"), ExtResource("4_sq5ok"), ExtResource("5_ahwd6"), ExtResource("6_okk4x"), ExtResource("7_6jwxu")]
+}
+
+[sub_resource type="Animation" id="Animation_v4kd6"]
+resource_name = "active_girl"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_bxm0s"), ExtResource("9_ul2h6"), ExtResource("10_l027k"), ExtResource("11_ysllg"), ExtResource("12_wbodd"), ExtResource("13_2bih4")]
+}
+
+[sub_resource type="Animation" id="Animation_uh53e"]
+resource_name = "idle_boy"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rl673")]
+}
+
+[sub_resource type="Animation" id="Animation_4mlq8"]
+resource_name = "idle_girl"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_bxm0s")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ud8q2"]
+_data = {
+"RESET": SubResource("Animation_ep0h1"),
+"active_boy": SubResource("Animation_w5fin"),
+"active_girl": SubResource("Animation_v4kd6"),
+"idle_boy": SubResource("Animation_uh53e"),
+"idle_girl": SubResource("Animation_4mlq8")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd53i"]
+size = Vector2(489, 467)
+
+[node name="Friend" type="Node2D"]
+script = ExtResource("1_bfn73")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_ggyep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, -14.5)
+shape = SubResource("RectangleShape2D_ydirj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ud8q2")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rl673")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-463.5, 205)
+shape = SubResource("RectangleShape2D_jd53i")
+
+[node name="GlowingSpot" parent="." instance=ExtResource("14_4wo61")]
+z_index = -1
+position = Vector2(0, 401)
+
+[node name="InteractionButton" type="CanvasLayer" parent="."]
+
+[node name="Interact" type="Node2D" parent="InteractionButton"]
+position = Vector2(896, 0)
+scale = Vector2(0.07, 0.07)
+
+[node name="InteractSprite" type="Sprite2D" parent="InteractionButton/Interact"]
+position = Vector2(9445.71, 13088.6)
+texture = ExtResource("15_88ab6")
+
+[node name="InteractLabel" type="Label" parent="InteractionButton/Interact"]
+offset_left = 8588.57
+offset_top = 12745.7
+offset_right = 10295.6
+offset_bottom = 13429.7
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_7if0p")
+theme_override_font_sizes/font_size = 480
+text = "ใช้สิ่งของ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InteractButton" type="Button" parent="InteractionButton/Interact"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 8545.71
+offset_top = 12174.6
+offset_right = 8619.71
+offset_bottom = 12250.6
+scale = Vector2(24, 24)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="InteractionButton/Interact/InteractButton" to="." method="_on_interact_button_pressed"]

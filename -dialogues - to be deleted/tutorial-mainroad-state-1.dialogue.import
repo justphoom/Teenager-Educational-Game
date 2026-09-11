@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c6n010jgel3iy"
+path="res://.godot/imported/tutorial-mainroad-state-1.dialogue-be3d3d5569da4936ba3d8bf37a9666c6.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-mainroad-state-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-mainroad-state-1.dialogue-be3d3d5569da4936ba3d8bf37a9666c6.tres"]
+
+[params]
+
+defaults=true

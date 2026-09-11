@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c6be6ihqrx1rd"
+path="res://.godot/imported/knowledge-present.dialogue-56f4588c71026528e9f78436069a6582.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/knowledge-present.dialogue"
+dest_files=["res://.godot/imported/knowledge-present.dialogue-56f4588c71026528e9f78436069a6582.tres"]
+
+[params]
+
+defaults=true

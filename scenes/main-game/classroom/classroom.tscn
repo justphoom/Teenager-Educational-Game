@@ -1,0 +1,135 @@
+[gd_scene load_steps=21 format=3 uid="uid://biw0blnqru7rl"]
+
+[ext_resource type="Script" path="res://scenes/main-game/classroom/classroom.gd" id="1_ub54e"]
+[ext_resource type="Texture2D" uid="uid://8033001fsvuh" path="res://assets/Classroom/ClassroomEmpty.png" id="2_f71ih"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="3_m64db"]
+[ext_resource type="Texture2D" uid="uid://d1gdnru5al6nh" path="res://assets/Classroom/Bookcase - resized.png" id="4_gsfrc"]
+[ext_resource type="Texture2D" uid="uid://ces2inwtwoc8m" path="res://assets/Classroom/ClassroomTableOne.png" id="4_kfp3k"]
+[ext_resource type="Texture2D" uid="uid://28ndeyf6pcvu" path="res://assets/Classroom/ClassroomChairOne.png" id="5_pkgr6"]
+[ext_resource type="PackedScene" uid="uid://ucqu0png0v8f" path="res://features/objects/bookshelf/bookshelf.tscn" id="8_frpaj"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="9_4c8fa"]
+[ext_resource type="PackedScene" uid="uid://dspwjh3xjua3l" path="res://features/objects/classroom/classroom.tscn" id="9_lnsvy"]
+[ext_resource type="PackedScene" uid="uid://bog7fp6mdkunj" path="res://features/objects/friend/friend.tscn" id="10_4cp80"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="10_s2s4a"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l4que"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lvtq6"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vhq2o"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o0wmq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whuql"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m4yb"]
+size = Vector2(232, 112.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_excpe"]
+size = Vector2(119, 513)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrms4"]
+size = Vector2(93.25, 352.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ertrf"]
+size = Vector2(336, 63.75)
+
+[node name="Classroom" type="Node2D"]
+script = ExtResource("1_ub54e")
+
+[node name="Player" parent="." instance=ExtResource("3_m64db")]
+z_index = 10
+position = Vector2(909, 817)
+scale = Vector2(0.8, 0.8)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(914, 500)
+scale = Vector2(1.09444, 1.09444)
+texture = ExtResource("2_f71ih")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(335, 403)
+shape = SubResource("WorldBoundaryShape2D_l4que")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1485, 471)
+shape = SubResource("WorldBoundaryShape2D_lvtq6")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(898, 350)
+shape = SubResource("WorldBoundaryShape2D_vhq2o")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(913, 964)
+shape = SubResource("WorldBoundaryShape2D_o0wmq")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(640, 680)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(271, 269)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_whuql")
+
+[node name="GlowingSpot_Exit" parent="." instance=ExtResource("9_4c8fa")]
+position = Vector2(912, 1005)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(902, 515.25)
+shape = SubResource("RectangleShape2D_0m4yb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(1412.5, 680.5)
+shape = SubResource("RectangleShape2D_excpe")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(383.375, 785.25)
+shape = SubResource("RectangleShape2D_yrms4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(567, 927.875)
+shape = SubResource("RectangleShape2D_ertrf")
+
+[node name="Desk" type="Sprite2D" parent="StaticObject"]
+position = Vector2(904, 522)
+scale = Vector2(1.2625, 1.2625)
+texture = ExtResource("4_kfp3k")
+
+[node name="Chair" type="Sprite2D" parent="StaticObject"]
+z_index = -5
+position = Vector2(900, 657)
+scale = Vector2(1.2125, 1.2125)
+texture = ExtResource("5_pkgr6")
+
+[node name="Bookshelf" type="Sprite2D" parent="StaticObject"]
+z_index = 20
+position = Vector2(539, 762)
+scale = Vector2(1.36306, 1.36306)
+texture = ExtResource("4_gsfrc")
+
+[node name="bookshelfObject" parent="." instance=ExtResource("8_frpaj")]
+position = Vector2(552, 774)
+
+[node name="classroomObject" parent="." instance=ExtResource("9_lnsvy")]
+position = Vector2(905, 491)
+
+[node name="friendObject" parent="." instance=ExtResource("10_4cp80")]
+position = Vector2(1289, 801)
+scale = Vector2(0.235, 0.235)
+
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_s2s4a")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

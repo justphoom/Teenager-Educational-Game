@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://des5suqqblyad"
+path="res://.godot/imported/tutorial-object-friend-state-2.dialogue-687e979eb23ad07c31e61d2e4fd265b6.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-object-friend-state-2.dialogue"
+dest_files=["res://.godot/imported/tutorial-object-friend-state-2.dialogue-687e979eb23ad07c31e61d2e4fd265b6.tres"]
+
+[params]
+
+defaults=true

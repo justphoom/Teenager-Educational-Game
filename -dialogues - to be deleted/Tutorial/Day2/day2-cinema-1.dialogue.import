@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cck5bs8f8o8xt"
+path="res://.godot/imported/day2-cinema-1.dialogue-64a3b56c952c042d18aa52e4d8685be3.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day2/day2-cinema-1.dialogue"
+dest_files=["res://.godot/imported/day2-cinema-1.dialogue-64a3b56c952c042d18aa52e4d8685be3.tres"]
+
+[params]
+
+defaults=true

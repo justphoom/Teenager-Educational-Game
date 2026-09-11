@@ -1,0 +1,95 @@
+[gd_scene load_steps=15 format=3 uid="uid://cwgwptnmghnxx"]
+
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="1_6q2vv"]
+[ext_resource type="Script" path="res://scenes/tutorials/day2/tutorial_day_2_cafe_1.gd" id="1_xi5px"]
+[ext_resource type="Texture2D" uid="uid://cx3f2worm20rh" path="res://assets/Cafe/CafeInside.png" id="2_b52bn"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="3_v8qf2"]
+[ext_resource type="PackedScene" uid="uid://bole0hx265pqe" path="res://features/objects/cafe/cafe.tscn" id="4_egeob"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="5_jnj7r"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dgo1h"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e24xg"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j0k54"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7tt24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vevhd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsfuq"]
+size = Vector2(776, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li08l"]
+size = Vector2(262, 210)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a656r"]
+size = Vector2(245, 168)
+
+[node name="Tutorial_Day2_Cafe_1" type="Node2D"]
+script = ExtResource("1_xi5px")
+
+[node name="Player" parent="." instance=ExtResource("1_6q2vv")]
+position = Vector2(1283, 748)
+scale = Vector2(0.85, 0.85)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(944, 491)
+scale = Vector2(1.4463, 1.4463)
+texture = ExtResource("2_b52bn")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(340, 461)
+shape = SubResource("WorldBoundaryShape2D_dgo1h")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1549, 549)
+shape = SubResource("WorldBoundaryShape2D_e24xg")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(642, 251)
+shape = SubResource("WorldBoundaryShape2D_j0k54")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(969, 919)
+shape = SubResource("WorldBoundaryShape2D_7tt24")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(885, 640)
+
+[node name="ExitCollision" type="CollisionShape2D" parent="Exit"]
+position = Vector2(409, 262)
+scale = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_vevhd")
+
+[node name="GlowingSpot_Exit" parent="." instance=ExtResource("3_v8qf2")]
+position = Vector2(1293, 962)
+scale = Vector2(0.6, 0.6)
+
+[node name="StaticObject" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(1133, 394)
+shape = SubResource("RectangleShape2D_fsfuq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(631, 793)
+shape = SubResource("RectangleShape2D_li08l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticObject"]
+position = Vector2(506.5, 418)
+shape = SubResource("RectangleShape2D_a656r")
+
+[node name="cafeObject" parent="." instance=ExtResource("4_egeob")]
+position = Vector2(1207, 371)
+
+[node name="ExitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_jnj7r")
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

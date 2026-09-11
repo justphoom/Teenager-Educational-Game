@@ -1,0 +1,119 @@
+[gd_scene load_steps=18 format=3 uid="uid://kicetbtyxenb"]
+
+[ext_resource type="Texture2D" uid="uid://mifo2nrrvr2h" path="res://assets/MainRoad/Main road - refined.png" id="1_dhstl"]
+[ext_resource type="Script" path="res://scenes/tutorials/day3/tutorial_day_3_mainroad_1.gd" id="1_u8oh8"]
+[ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="2_qdjil"]
+[ext_resource type="AudioStream" uid="uid://csj5fufvcyuy4" path="res://assets/Audio/SoundEffect/Open The Door.wav" id="3_opwbn"]
+[ext_resource type="Texture2D" uid="uid://nn4jmhf83w7r" path="res://assets/Misc/GrowingSpot_Yellow.png" id="5_2fw3e"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="6_mtf8b"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oxfe8"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b5oxk"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mrmp"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ec7op"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfn0r"]
+size = Vector2(297, 175.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8dd3"]
+size = Vector2(316, 803)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tu26"]
+size = Vector2(745, 229.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi114"]
+size = Vector2(50, 532.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qra7f"]
+size = Vector2(727.5, 249)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb6w6"]
+size = Vector2(530, 502.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nbep"]
+size = Vector2(29.5, 30)
+
+[node name="Tutorial_Day3_Mainroad_1" type="Node2D"]
+script = ExtResource("1_u8oh8")
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1000
+position = Vector2(960, 540)
+texture = ExtResource("1_dhstl")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(0, 360)
+shape = SubResource("WorldBoundaryShape2D_oxfe8")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(1920, 417)
+shape = SubResource("WorldBoundaryShape2D_b5oxk")
+
+[node name="TopBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(640, 0)
+shape = SubResource("WorldBoundaryShape2D_5mrmp")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="Background"]
+position = Vector2(956, 1042)
+shape = SubResource("WorldBoundaryShape2D_ec7op")
+
+[node name="Player" parent="." instance=ExtResource("2_qdjil")]
+z_index = 5
+position = Vector2(150, 900)
+
+[node name="Obstacles" type="StaticBody2D" parent="."]
+
+[node name="StaticBody2D" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(167.5, 723.75)
+shape = SubResource("RectangleShape2D_vfn0r")
+
+[node name="StaticBody2D2" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(726, 416)
+shape = SubResource("RectangleShape2D_k8dd3")
+
+[node name="StaticBody2D3" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(1471.5, 122.125)
+shape = SubResource("RectangleShape2D_4tu26")
+
+[node name="StaticBody2D4" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(1878, 444)
+shape = SubResource("RectangleShape2D_hi114")
+
+[node name="StaticBody2D5" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(1474.75, 617.5)
+shape = SubResource("RectangleShape2D_qra7f")
+
+[node name="StaticBody2D6" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(283, 271)
+shape = SubResource("RectangleShape2D_kb6w6")
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_opwbn")
+
+[node name="Arcade" type="Node2D" parent="."]
+
+[node name="ArcadePortal" type="Area2D" parent="Arcade"]
+position = Vector2(660, 20)
+
+[node name="DoorCollision" type="CollisionShape2D" parent="Arcade/ArcadePortal"]
+position = Vector2(330, 13)
+scale = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_3nbep")
+
+[node name="ArcadeSign" type="Sprite2D" parent="Arcade"]
+position = Vector2(1000, 60)
+texture = ExtResource("5_2fw3e")
+
+[node name="GlowingSpot_Arcade" parent="Arcade" instance=ExtResource("6_mtf8b")]
+position = Vector2(1000, 35)
+scale = Vector2(0.6, 0.6)
+
+[connection signal="body_entered" from="Arcade/ArcadePortal" to="." method="_on_arcade_portal_body_entered"]

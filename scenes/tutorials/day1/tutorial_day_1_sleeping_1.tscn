@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2nao6hd1g3jo"]
+
+[ext_resource type="Script" path="res://scenes/tutorials/day1/tutorial_day_1_sleeping_1.gd" id="1_bot51"]
+[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="2_ej2ey"]
+[ext_resource type="Texture2D" uid="uid://cfdf3e7y2lk80" path="res://assets/Misc/ScorboardBackground.png" id="3_aoh4u"]
+
+[node name="Tutorial_Day1_Sleeping_1" type="Node2D"]
+script = ExtResource("1_bot51")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 690.0
+offset_top = 357.0
+offset_right = 1204.0
+offset_bottom = 657.0
+theme_override_fonts/font = ExtResource("2_ej2ey")
+theme_override_font_sizes/font_size = 64
+text = "ต่อไป"
+
+[node name="SleepingBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("3_aoh4u")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dcc27ja8ni4t"
+path="res://.godot/imported/tutorial-after-read-schedule.dialogue-117de485d1d602393e831994dd608b6f.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-after-read-schedule.dialogue"
+dest_files=["res://.godot/imported/tutorial-after-read-schedule.dialogue-117de485d1d602393e831994dd608b6f.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://73mmsswut57a"
+path="res://.godot/imported/object-unavialable.dialogue-e58b01a204fd440d79823b1a2920854d.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/object-unavialable.dialogue"
+dest_files=["res://.godot/imported/object-unavialable.dialogue-e58b01a204fd440d79823b1a2920854d.tres"]
+
+[params]
+
+defaults=true

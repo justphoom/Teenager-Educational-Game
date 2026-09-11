@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://7mdjnd1c20rw"
+path="res://.godot/imported/tutorial-after-school-1.dialogue-58b46b8c747e035855ca3ba0517c6ed4.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-after-school-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-after-school-1.dialogue-58b46b8c747e035855ca3ba0517c6ed4.tres"]
+
+[params]
+
+defaults=true

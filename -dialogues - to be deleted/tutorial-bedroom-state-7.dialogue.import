@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cp1x8cjwbfysr"
+path="res://.godot/imported/tutorial-bedroom-state-7.dialogue-9eef8eb5d38357b2a99be67cc1923488.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-bedroom-state-7.dialogue"
+dest_files=["res://.godot/imported/tutorial-bedroom-state-7.dialogue-9eef8eb5d38357b2a99be67cc1923488.tres"]
+
+[params]
+
+defaults=true

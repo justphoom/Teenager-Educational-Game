@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://thuf5u4jna1r"
+path="res://.godot/imported/temp.dialogue-bcd2a71d8b80ecd5cb0ea56456267ee9.tres"
+
+[deps]
+
+source_file="res://temp.dialogue"
+dest_files=["res://.godot/imported/temp.dialogue-bcd2a71d8b80ecd5cb0ea56456267ee9.tres"]
+
+[params]
+
+defaults=true

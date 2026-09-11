@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ct0dfkxda8mth"
+path="res://.godot/imported/tutorial-object-cafe-1.dialogue-f4c0db5d1f4a58534d6d5517d8266357.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-object-cafe-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-object-cafe-1.dialogue-f4c0db5d1f4a58534d6d5517d8266357.tres"]
+
+[params]
+
+defaults=true

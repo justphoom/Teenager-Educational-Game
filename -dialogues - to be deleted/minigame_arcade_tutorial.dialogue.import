@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bsgd77l26x4ml"
+path="res://.godot/imported/minigame_arcade_tutorial.dialogue-0e32514f49c990b3791dfc3395fca0d2.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/minigame_arcade_tutorial.dialogue"
+dest_files=["res://.godot/imported/minigame_arcade_tutorial.dialogue-0e32514f49c990b3791dfc3395fca0d2.tres"]
+
+[params]
+
+defaults=true

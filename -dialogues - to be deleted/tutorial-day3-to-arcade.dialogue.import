@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cdmr5p2cabibf"
+path="res://.godot/imported/tutorial-day3-to-arcade.dialogue-0de8cb51f35c181a3ae93a44f97e8171.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-day3-to-arcade.dialogue"
+dest_files=["res://.godot/imported/tutorial-day3-to-arcade.dialogue-0de8cb51f35c181a3ae93a44f97e8171.tres"]
+
+[params]
+
+defaults=true

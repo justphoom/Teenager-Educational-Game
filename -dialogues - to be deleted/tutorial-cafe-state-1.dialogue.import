@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ccq3syxwawnf7"
+path="res://.godot/imported/tutorial-cafe-state-1.dialogue-f458aa83c475bea45220bd2ec31f9e22.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-cafe-state-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-cafe-state-1.dialogue-f458aa83c475bea45220bd2ec31f9e22.tres"]
+
+[params]
+
+defaults=true

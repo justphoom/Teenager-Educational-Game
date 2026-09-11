@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c7qmllya5mwyc"
+path="res://.godot/imported/tutorial-object-desktop-1.dialogue-2031f714def1768fc4eb6307d5f74d9f.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-object-desktop-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-object-desktop-1.dialogue-2031f714def1768fc4eb6307d5f74d9f.tres"]
+
+[params]
+
+defaults=true

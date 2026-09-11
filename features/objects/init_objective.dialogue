@@ -1,0 +1,9 @@
+~ start
+#get ObjectiveAction.selected_object
+พี่ต่าย : ต้องการใช้ไอเทม {{ ObjectiveAction.selected_object }} หรือไม่
+- ใช่ 
+	ใช้ไอเทม
+	do ObjectiveAction._set_using_item()
+- ไม่
+	คุณไม่ได้ใช้ไอเทม
+=> END

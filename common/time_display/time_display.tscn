@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd2lxvcx4c02m"]
+
+[ext_resource type="Script" path="res://common/time_display/time_display.gd" id="1_8m0wk"]
+
+[node name="TimeDisplay" type="CanvasLayer"]
+script = ExtResource("1_8m0wk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1267.0
+offset_top = 342.0
+offset_right = 1919.0
+offset_bottom = 469.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "เวลา : "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1264.0
+offset_top = 223.0
+offset_right = 1916.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "วันที่ : "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1262.0
+offset_top = 118.0
+offset_right = 1914.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "รอบที่ : "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1257.0
+offset_top = 15.0
+offset_right = 1909.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "วันสอบ : "
+horizontal_alignment = 1
+vertical_alignment = 1

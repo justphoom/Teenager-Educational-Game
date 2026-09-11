@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqestje3yk27x"]
+
+[ext_resource type="Script" path="res://features/objects/schedule/schedule.gd" id="1_wmleb"]
+[ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="2_3w3du"]
+[ext_resource type="Texture2D" uid="uid://d0v54u24mmxa4" path="res://assets/Home/Mark low table - resized.png" id="2_ryrhw"]
+[ext_resource type="PackedScene" uid="uid://dxfqi87cnb6lu" path="res://features/objects/object_area_component.tscn" id="3_urpsv"]
+
+[sub_resource type="Animation" id="Animation_3540x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bj2al"]
+resource_name = "active"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_0twt2"]
+resource_name = "idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ce1it"]
+_data = {
+"RESET": SubResource("Animation_3540x"),
+"active": SubResource("Animation_bj2al"),
+"idle": SubResource("Animation_0twt2")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soxdv"]
+size = Vector2(140, 89)
+
+[node name="Schedule" type="Node2D"]
+position = Vector2(0, 3)
+script = ExtResource("1_wmleb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ryrhw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ce1it")
+}
+
+[node name="ActiveAreaComponent" parent="." instance=ExtResource("3_urpsv")]
+position = Vector2(-1, 202)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveAreaComponent"]
+position = Vector2(1, -1.5)
+shape = SubResource("RectangleShape2D_soxdv")
+
+[node name="GlowingSpot" parent="." instance=ExtResource("2_3w3du")]
+z_index = -1
+scale = Vector2(0.4, 0.4)

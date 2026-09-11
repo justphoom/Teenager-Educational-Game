@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://0pweu5clkly3"
+path="res://.godot/imported/tutorial-object-cinema-1.dialogue-e5bb946a18b89c5e4146969601839638.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/tutorial-object-cinema-1.dialogue"
+dest_files=["res://.godot/imported/tutorial-object-cinema-1.dialogue-e5bb946a18b89c5e4146969601839638.tres"]
+
+[params]
+
+defaults=true

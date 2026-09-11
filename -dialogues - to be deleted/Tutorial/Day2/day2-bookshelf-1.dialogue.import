@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://t2et57tp1nas"
+path="res://.godot/imported/day2-bookshelf-1.dialogue-6cc2d757d87bf72913470b3bcb882696.tres"
+
+[deps]
+
+source_file="res://-dialogues - to be deleted/Tutorial/Day2/day2-bookshelf-1.dialogue"
+dest_files=["res://.godot/imported/day2-bookshelf-1.dialogue-6cc2d757d87bf72913470b3bcb882696.tres"]
+
+[params]
+
+defaults=true
