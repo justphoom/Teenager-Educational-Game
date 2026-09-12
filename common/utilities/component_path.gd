@@ -6,6 +6,8 @@ const CHARACTER_PATH : Dictionary = {
 	CONSTANT.CHARACTER_TYPE.GIRL : "res://common/character/girl/character_girl.tscn"
 }
 
+const GLOWING_SPOT : String = "res://features/glowing_spot/glowing_spot.tscn"
+
 const SCENE_PATH : Dictionary = {
 	
 }

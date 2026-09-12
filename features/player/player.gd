@@ -11,6 +11,8 @@ var PlayerCharacter : CharacterBody2D
 var PlayerCharacterSprite : AnimatedSprite2D
 var currentItemName : String
 
+var player_glow : GLOWING_SPOT
+
 func _ready():
 	self.adding_player_character(PlayerStatus.PLAYER_GENDER)
 	Signals.object_entered.connect(_on_object_entered, 1)
@@ -19,6 +21,8 @@ func _ready():
 	DialogueManager.dialogue_started.connect(_on_dialog_started, 1)
 	DialogueManager.dialogue_ended.connect(_on_dialog_ended, 1)
 	interactButton.hide()
+	
+	player_glow.setType(0)
 
 func _physics_process(delta: float) -> void:
 	var input_direction = Vector2(
@@ -81,6 +85,12 @@ func adding_player_character(gender) -> void:
 	self.PlayerCharacter = load(COMPONENT_PATH.CHARACTER_PATH.get(gender)).instantiate()
 	add_child(self.PlayerCharacter)
 	self.PlayerCharacterSprite = self.PlayerCharacter.get_node("PlayerCharacter")
+	self.PlayerCharacterSprite.z_index = 5
+	
+	self.player_glow = load(COMPONENT_PATH.GLOWING_SPOT).instantiate()
+	self.PlayerCharacter.add_child(self.player_glow)
+	self.player_glow.scale = Vector2(0.6, 0.6)
+	
 
 func _on_object_entered(name: String) -> void:
 	currentItemName = name
