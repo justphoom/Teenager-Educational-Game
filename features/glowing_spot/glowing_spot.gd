@@ -4,40 +4,46 @@ class_name GLOWING_SPOT
 @onready var sprite = $SpotSprite
 @onready var animation = $AnimationPlayer
 
-var red_glow  = preload("res://assets/Misc/GlowingSpot/GrowingSpot_Red.png")
-var yellow_glow  = preload("res://assets/Misc/GlowingSpot/GrowingSpot_Yellow.png")
-var green_glow  = preload("res://assets/Misc/GlowingSpot/GrowingSpot_Green.png")
-var white_glow = preload("res://assets/Misc/GlowingSpot/GrowingSpot_White.png")
-var black_glow = preload("res://assets/Misc/GlowingSpot/GrowingSpot_Black.png")
-
 enum {
 	normal,
 	caution,
 	danger,
 	unavailable,
 	highlight,
+	texture,
+	animation_type
+}
+
+var glowing_type : Dictionary = {
+	normal : {
+		texture : preload("res://assets/Misc/GlowingSpot/GrowingSpot_Green.png"),
+		animation_type : "type_3"
+	},
+	caution : {
+		texture : preload("res://assets/Misc/GlowingSpot/GrowingSpot_Yellow.png"),
+		animation_type : "type_2"
+	},
+	danger : {
+		texture : preload("res://assets/Misc/GlowingSpot/GrowingSpot_Red.png"),
+		animation_type : "type_1"
+	},
+	unavailable : {
+		texture : preload("res://assets/Misc/GlowingSpot/GrowingSpot_Black.png"),
+		animation_type : "type_0"
+	},
+	highlight : {
+		texture : preload("res://assets/Misc/GlowingSpot/GrowingSpot_White.png"),
+		animation_type : "type_default"
+	}
 }
 
 func _ready():
 	self.setType(highlight)
 
 func setType(type : int):
-	match type:
-		normal :
-			sprite.texture = green_glow
-			animation.play("type_3")
-		caution :
-			sprite.texture = yellow_glow
-			animation.play("type_2")
-		danger : 
-			sprite.texture = red_glow
-			animation.play("type_1")
-		unavailable :
-			sprite.texture = white_glow
-			animation.play("type_0")
-		highlight :
-			sprite.texture = black_glow
-			animation.play("type_default")
-		_ :
-			sprite.texture = null
-			animation.play("RESET")
+	if type not in glowing_type.keys() :
+		sprite.texture = null
+		animation.play("RESET")
+		return
+	sprite.texture = glowing_type.get(type).get(texture)
+	animation.play(glowing_type.get(type).get(animation_type))
