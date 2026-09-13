@@ -8,6 +8,10 @@ const CHARACTER_PATH : Dictionary = {
 
 const GLOWING_SPOT : String = "res://features/glowing_spot/glowing_spot.tscn"
 
+const DIALOGUE_ICON_BOY : String = "res://assets/Misc/DialogueBox/Icons/B-PF.PNG"
+const DIALOGUE_ICON_GIRL : String = "res://assets/Misc/DialogueBox/Icons/G-PF.PNG"
+const DIALOGUE_ICON_GUIDE : String = "res://assets/Misc/DialogueBox/Icons/Ptai-PF.PNG"
+
 const SCENE_PATH : Dictionary = {
 	
 }

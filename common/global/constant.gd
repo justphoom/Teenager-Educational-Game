@@ -27,3 +27,7 @@ enum PLAYER_BEHAVIOR_SOCRE {
 	GOOD,
 	EXCELLENT
 }
+
+const GUIDE_NAME : String = "พี่ต่าย"
+const BOY_NAME : String = "ตะวัน"
+const GIRL_NAME : String = "จันทร์เจ้า"

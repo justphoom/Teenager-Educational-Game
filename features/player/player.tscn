@@ -100,6 +100,7 @@ offset_bottom = 96.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TimeDisplay" parent="." instance=ExtResource("80_xhayk")]
+visible = false
 
 [connection signal="pressed" from="Joystick/Stats/StatsButton" to="." method="_on_stats_button_pressed"]
 [connection signal="pressed" from="Joystick/Interact/InteractButton" to="." method="_on_interact_button_pressed"]

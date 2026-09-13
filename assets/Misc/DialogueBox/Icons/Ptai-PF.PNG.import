@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgdmy3btj81lc"
-path="res://.godot/imported/G-PF.PNG-ef483ead07e15c5609e245b2353f8b2c.ctex"
+uid="uid://jls70c2rom08"
+path="res://.godot/imported/Ptai-PF.PNG-d23130af2727111d727538b124337539.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ObjectAction/Chatbox/Chat Icon/G-PF.PNG"
-dest_files=["res://.godot/imported/G-PF.PNG-ef483ead07e15c5609e245b2353f8b2c.ctex"]
+source_file="res://assets/Misc/DialogueBox/Icons/Ptai-PF.PNG"
+dest_files=["res://.godot/imported/Ptai-PF.PNG-d23130af2727111d727538b124337539.ctex"]
 
 [params]
 

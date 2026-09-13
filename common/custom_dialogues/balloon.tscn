@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://bq6xvq1b1sckx" path="res://common/theme/main_theme.tres" id="2_mkq2n"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="4_3a8qo"]
-[ext_resource type="Texture2D" uid="uid://jls70c2rom08" path="res://assets/ObjectAction/Chatbox/Chat Icon/Ptai-PF.PNG" id="6_0ix7d"]
+[ext_resource type="Texture2D" uid="uid://jls70c2rom08" path="res://assets/Misc/DialogueBox/Icons/Ptai-PF.PNG" id="4_gavga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -136,7 +136,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 140)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("6_0ix7d")
+texture = ExtResource("4_gavga")
 expand_mode = 1
 stretch_mode = 4
 

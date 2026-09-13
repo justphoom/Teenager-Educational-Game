@@ -1,6 +1,7 @@
 ~ start
 #get ObjectiveAction.selected_object
-พี่ต่าย : ต้องการใช้ไอเทม {{ ObjectiveAction.selected_object }} หรือไม่
+{{ Global.GUIDE_NAME }} : ต้องการใช้ไอเทม {{ ObjectiveAction.selected_object }} หรือไม่
+{{ Global.GUIDE_NAME }} : ทดสอบ
 - ใช่ 
 	ใช้ไอเทม
 	do ObjectiveAction._set_using_item()

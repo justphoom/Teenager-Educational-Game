@@ -57,6 +57,14 @@ func cycle_update() -> void:
 		ASSESSMENT_DATE = true
 		print("End-Game Test")
 
+const GUIDE_NAME : String = CONSTANT.GUIDE_NAME
+var FRIEND_NAME : String
+func set_friend_name() -> void :
+	if PlayerStatus.PLAYER_GENDER == CONSTANT.CHARACTER_TYPE.BOY:
+		self.FRIEND_NAME = CONSTANT.GIRL_NAME
+	else :
+		self.FRIEND_NAME = CONSTANT.BOY_NAME
+
 # func show_schedule():
 # 	var schedule = $"../tutorial-bedroom/Schedule"
 # 	schedule.show()

@@ -171,5 +171,18 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 #endregion
 
+
+@onready var dialogue_icon_boy : Resource = preload(COMPONENT_PATH.DIALOGUE_ICON_BOY)
+@onready var dialogue_icon_girl : Resource = preload(COMPONENT_PATH.DIALOGUE_ICON_GIRL)
+@onready var dialogue_icon_guide : Resource = preload(COMPONENT_PATH.DIALOGUE_ICON_GUIDE)
+
 func load_speaker_icon(name: String) -> void:
-	print("speaker name : " + name)
+	match name :
+		CONSTANT.BOY_NAME :
+			character_icon.texture = dialogue_icon_boy
+		CONSTANT.GIRL_NAME :
+			character_icon.texture = dialogue_icon_girl
+		CONSTANT.GUIDE_NAME :
+			character_icon.texture = dialogue_icon_guide
+		_ :
+			character_icon.texture = dialogue_icon_guide
