@@ -1,14 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl7krmkycxd3c"]
+[gd_scene load_steps=11 format=3 uid="uid://dl7krmkycxd3c"]
 
 [ext_resource type="Script" path="res://scenes/test.gd" id="1_hs8wr"]
 [ext_resource type="PackedScene" uid="uid://dylfosr4mmrb6" path="res://features/player/player.tscn" id="1_t6oix"]
 [ext_resource type="PackedScene" uid="uid://bqestje3yk27x" path="res://features/objects/schedule/schedule.tscn" id="2_w3233"]
+[ext_resource type="PackedScene" uid="uid://bog7fp6mdkunj" path="res://features/objects/friend/friend.tscn" id="4_fnfmh"]
+[ext_resource type="PackedScene" uid="uid://bqoa874lwsqi8" path="res://features/objects/bedroom/bedroom.tscn" id="5_cbsnj"]
+[ext_resource type="PackedScene" uid="uid://ucqu0png0v8f" path="res://features/objects/bookshelf/bookshelf.tscn" id="6_nqp6i"]
+[ext_resource type="PackedScene" uid="uid://bole0hx265pqe" path="res://features/objects/cafe/cafe.tscn" id="7_8b4lw"]
+[ext_resource type="PackedScene" uid="uid://dr4s75qj6gsts" path="res://features/objects/cinema/cinema.tscn" id="8_fkllc"]
+[ext_resource type="PackedScene" uid="uid://dspwjh3xjua3l" path="res://features/objects/classroom/classroom.tscn" id="9_miv8v"]
+[ext_resource type="PackedScene" uid="uid://v2gdnu3q1imd" path="res://features/objects/desktop/desktop.tscn" id="10_q1v8s"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_hs8wr")
 
 [node name="Player" parent="." instance=ExtResource("1_t6oix")]
-position = Vector2(188, 363)
+position = Vector2(297, 290)
 
 [node name="Schedule" parent="." instance=ExtResource("2_w3233")]
-position = Vector2(205, 166)
+position = Vector2(104, 54)
+
+[node name="Friend" parent="." instance=ExtResource("4_fnfmh")]
+position = Vector2(490, 152)
+
+[node name="Bedroom" parent="." instance=ExtResource("5_cbsnj")]
+position = Vector2(1748, 304)
+
+[node name="Bookshelf" parent="." instance=ExtResource("6_nqp6i")]
+position = Vector2(259, 508)
+
+[node name="Cafe" parent="." instance=ExtResource("7_8b4lw")]
+position = Vector2(745, 588)
+
+[node name="Cinema" parent="." instance=ExtResource("8_fkllc")]
+position = Vector2(1197, 596)
+
+[node name="Classroom" parent="." instance=ExtResource("9_miv8v")]
+position = Vector2(914, 110)
+
+[node name="Desktop" parent="." instance=ExtResource("10_q1v8s")]
+position = Vector2(1367, 125)

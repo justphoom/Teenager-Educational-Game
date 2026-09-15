@@ -1,6 +1,5 @@
 extends Node
 
-
 var PLAYER_GENDER: int = CONSTANT.CHARACTER_TYPE.GIRL
 var PLAYER_NAME : String = 'ชื่อทดสอบ'
 

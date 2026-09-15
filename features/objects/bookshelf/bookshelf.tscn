@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ucqu0png0v8f"]
+[gd_scene load_steps=10 format=3 uid="uid://ucqu0png0v8f"]
 
 [ext_resource type="Script" path="res://features/objects/bookshelf/bookshelf.gd" id="1_dglci"]
 [ext_resource type="Texture2D" uid="uid://cv62t3onp2vlu" path="res://assets/Classroom/Books Extra - resized.png" id="2_d27bp"]
+[ext_resource type="PackedScene" uid="uid://dxfqi87cnb6lu" path="res://features/objects/_components/object_area_component.tscn" id="3_h00gv"]
 [ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="3_i1sek"]
-[ext_resource type="Texture2D" uid="uid://cqqiyxnmusgro" path="res://assets/MainCharacter/Joystick/joyknobpng.png" id="4_ih3br"]
-[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="5_qhkh4"]
 
 [sub_resource type="Animation" id="Animation_3540x"]
 length = 0.001
@@ -61,10 +60,10 @@ _data = {
 "idle": SubResource("Animation_0twt2")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_csago"]
-size = Vector2(266, 203.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpnya"]
+size = Vector2(269, 170)
 
-[node name="bookshelfObject" type="Node2D"]
+[node name="Bookshelf" type="Node2D"]
 script = ExtResource("1_dglci")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -75,51 +74,12 @@ libraries = {
 "": SubResource("AnimationLibrary_ce1it")
 }
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ObjectAreaComponent" parent="." instance=ExtResource("3_h00gv")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 4)
-scale = Vector2(0.8, 0.8)
-shape = SubResource("RectangleShape2D_csago")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectAreaComponent"]
+position = Vector2(0, 86)
+shape = SubResource("RectangleShape2D_xpnya")
 
 [node name="GlowingSpot" parent="." instance=ExtResource("3_i1sek")]
 z_index = -1
 scale = Vector2(0.4, 0.4)
-
-[node name="InteractionButton" type="CanvasLayer" parent="."]
-
-[node name="Interact" type="Node2D" parent="InteractionButton"]
-position = Vector2(896, 0)
-scale = Vector2(0.07, 0.07)
-
-[node name="InteractSprite" type="Sprite2D" parent="InteractionButton/Interact"]
-position = Vector2(9445.71, 13088.6)
-texture = ExtResource("4_ih3br")
-
-[node name="InteractLabel" type="Label" parent="InteractionButton/Interact"]
-offset_left = 8588.57
-offset_top = 12745.7
-offset_right = 10295.6
-offset_bottom = 13429.7
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_qhkh4")
-theme_override_font_sizes/font_size = 480
-text = "ใช้สิ่งของ"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="InteractButton" type="Button" parent="InteractionButton/Interact"]
-modulate = Color(1, 1, 1, 0)
-offset_left = 8545.71
-offset_top = 12174.6
-offset_right = 8619.71
-offset_bottom = 12250.6
-scale = Vector2(24, 24)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="InteractionButton/Interact/InteractButton" to="." method="_on_interact_button_pressed"]

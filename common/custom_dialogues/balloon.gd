@@ -176,8 +176,17 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 @onready var dialogue_icon_girl : Resource = preload(COMPONENT_PATH.DIALOGUE_ICON_GIRL)
 @onready var dialogue_icon_guide : Resource = preload(COMPONENT_PATH.DIALOGUE_ICON_GUIDE)
 
-func load_speaker_icon(name: String) -> void:
-	match name :
+func load_speaker_icon(speaker_name: String) -> void:
+	if speaker_name ==  PlayerStatus.PLAYER_NAME :
+		match PlayerStatus.PLAYER_GENDER:
+			CONSTANT.CHARACTER_TYPE.BOY:
+				character_icon.texture = dialogue_icon_boy
+			CONSTANT.CHARACTER_TYPE.GIRL:
+				character_icon.texture = dialogue_icon_girl
+			_ :
+				character_icon.texture = dialogue_icon_guide
+		return
+	match speaker_name :
 		CONSTANT.BOY_NAME :
 			character_icon.texture = dialogue_icon_boy
 		CONSTANT.GIRL_NAME :

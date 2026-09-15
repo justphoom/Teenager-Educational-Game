@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bexiqd8ay8lsr"
+path="res://.godot/imported/friend_temp.dialogue-4be1d8d5cab1a1bbb70d8d3eda8e74bf.tres"
+
+[deps]
+
+source_file="res://features/objects/friend/friend_action/friend_dialogues/friend_temp.dialogue"
+dest_files=["res://.godot/imported/friend_temp.dialogue-4be1d8d5cab1a1bbb70d8d3eda8e74bf.tres"]
+
+[params]
+
+defaults=true

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://features/objects/schedule/schedule_action/schedule.gd" id="1_6ylwa"]
 [ext_resource type="Texture2D" uid="uid://4tsmr1kfup0v" path="res://assets/ObjectAction/Schedule/Time Table.png" id="2_8e1y2"]
-[ext_resource type="Texture2D" uid="uid://yxlmlpka44ct" path="res://assets/Misc/ICON-02.png" id="2_w0lkm"]
+[ext_resource type="Texture2D" uid="uid://yxlmlpka44ct" path="res://assets/Misc/Icons/ICON-02.png" id="2_w0lkm"]
 
 [node name="Schedule" type="CanvasLayer"]
 script = ExtResource("1_6ylwa")

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://features/objects/schedule/schedule.gd" id="1_wmleb"]
 [ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="2_3w3du"]
 [ext_resource type="Texture2D" uid="uid://d0v54u24mmxa4" path="res://assets/Home/Mark low table - resized.png" id="2_ryrhw"]
-[ext_resource type="PackedScene" uid="uid://dxfqi87cnb6lu" path="res://features/objects/object_area_component.tscn" id="3_urpsv"]
+[ext_resource type="PackedScene" uid="uid://dxfqi87cnb6lu" path="res://features/objects/_components/object_area_component.tscn" id="3_urpsv"]
 
 [sub_resource type="Animation" id="Animation_3540x"]
 length = 0.001
@@ -75,10 +75,10 @@ libraries = {
 "": SubResource("AnimationLibrary_ce1it")
 }
 
-[node name="ActiveAreaComponent" parent="." instance=ExtResource("3_urpsv")]
+[node name="ObjectAreaComponent" parent="." instance=ExtResource("3_urpsv")]
 position = Vector2(-1, 202)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveAreaComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectAreaComponent"]
 position = Vector2(1, -1.5)
 shape = SubResource("RectangleShape2D_soxdv")
 

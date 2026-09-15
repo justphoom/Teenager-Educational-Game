@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bole0hx265pqe"]
+[gd_scene load_steps=10 format=3 uid="uid://bole0hx265pqe"]
 
 [ext_resource type="Script" path="res://features/objects/cafe/cafe.gd" id="1_ymibl"]
 [ext_resource type="Texture2D" uid="uid://dpip282yelwhj" path="res://assets/Cafe/Bubble milk tea 2 brothers - resized.png" id="2_1dllu"]
 [ext_resource type="PackedScene" uid="uid://c7pdelrv8j8k0" path="res://features/glowing_spot/glowing_spot.tscn" id="2_m7euo"]
-[ext_resource type="Texture2D" uid="uid://cqqiyxnmusgro" path="res://assets/MainCharacter/Joystick/joyknobpng.png" id="4_fdyoh"]
-[ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="5_cvl1p"]
+[ext_resource type="PackedScene" uid="uid://dxfqi87cnb6lu" path="res://features/objects/_components/object_area_component.tscn" id="4_fhsse"]
 
-[sub_resource type="Animation" id="Animation_0twt2"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_3540x"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -39,7 +37,8 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -20)]
 }
 
-[sub_resource type="Animation" id="Animation_3540x"]
+[sub_resource type="Animation" id="Animation_0twt2"]
+resource_name = "idle"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -61,10 +60,10 @@ _data = {
 "idle": SubResource("Animation_0twt2")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh45s"]
-size = Vector2(266, 94.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2aj8"]
+radius = 130.096
 
-[node name="cafeObject" type="Node2D"]
+[node name="Cafe" type="Node2D"]
 script = ExtResource("1_ymibl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -76,51 +75,13 @@ libraries = {
 "": SubResource("AnimationLibrary_ce1it")
 }
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 147.75)
-shape = SubResource("RectangleShape2D_yh45s")
-
 [node name="GlowingSpot" parent="." instance=ExtResource("2_m7euo")]
 z_index = -1
-position = Vector2(4, 51)
+position = Vector2(0, 50)
 scale = Vector2(0.4, 0.4)
 
-[node name="InteractionButton" type="CanvasLayer" parent="."]
+[node name="ObjectAreaComponent" parent="." instance=ExtResource("4_fhsse")]
 
-[node name="Interact" type="Node2D" parent="InteractionButton"]
-position = Vector2(896, 0)
-scale = Vector2(0.07, 0.07)
-
-[node name="InteractSprite" type="Sprite2D" parent="InteractionButton/Interact"]
-position = Vector2(9445.71, 13088.6)
-texture = ExtResource("4_fdyoh")
-
-[node name="InteractLabel" type="Label" parent="InteractionButton/Interact"]
-offset_left = 8588.57
-offset_top = 12745.7
-offset_right = 10295.6
-offset_bottom = 13429.7
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_cvl1p")
-theme_override_font_sizes/font_size = 480
-text = "ใช้สิ่งของ"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="InteractButton" type="Button" parent="InteractionButton/Interact"]
-modulate = Color(1, 1, 1, 0)
-offset_left = 8545.71
-offset_top = 12174.6
-offset_right = 8619.71
-offset_bottom = 12250.6
-scale = Vector2(24, 24)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="InteractionButton/Interact/InteractButton" to="." method="_on_interact_button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectAreaComponent"]
+position = Vector2(0, 51)
+shape = SubResource("CircleShape2D_u2aj8")

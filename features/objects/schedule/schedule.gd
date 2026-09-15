@@ -3,7 +3,6 @@ extends Node2D
 @onready var animationPlayer = $AnimationPlayer
 var stateController : ObjectStateController
 
-#make this one dynamic via composition style
 @onready var glowSpot = $GlowingSpot
 
 var AVAILABILITY_LIST : Array[int] = [
@@ -18,8 +17,9 @@ func _ready() -> void:
 	Signals.object_exited.connect(_on_object_exited)
 	stateController._ready()
 
-
-func _on_object_entered(name : String) -> void:
+func _on_object_entered(activeObject : String) -> void:
+	if activeObject != self.name:
+		return
 	stateController._set_hit_object()
 
 func _on_object_exited() -> void:
@@ -42,10 +42,11 @@ func check_priority() -> void:
 
 func check_avaibility() -> void:
 	if Global.CURRENT_TIME not in self.AVAILABILITY_LIST:
-		print("is not in active time")
+		#print("is not in active time")
 		pass
 	else:
-		print("active time")
+		pass
+		#print("active time")
 
 #func check_availability() -> bool:
 	#return AVAILABILITY_LIST.has(Global.CURRENT_TIME)

@@ -5,7 +5,7 @@ var object : Node
 
 func _init(object : Node ) -> void:
 	self.object = object
-	print("instantiateed object with state controller.")
+	#print("instantiateed object with state controller.")
 
 func _ready() -> void:
 	object.play_animation_idle()

@@ -9,7 +9,7 @@ var objective_src: Dictionary = {
 	"Cinema" : "",
 	"Classroom" : "",
 	"Desktop" : "",
-	"Friend" : "",
+	"Friend" : "res://features/objects/friend/friend_action/friend.tscn",
 	"Schedule" : "res://features/objects/schedule/schedule_action/schedule.tscn"
 }
 
@@ -26,6 +26,7 @@ func start_objective(resource : DialogueResource) -> void:
 		return
 	if not self.using_item:
 		return
+	print("Starting objective for: " + self.selected_object)
 	var objective_name = self.selected_object
 	Utilities.load_component(objective_src.get(objective_name))
 

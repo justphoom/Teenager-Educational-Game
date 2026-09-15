@@ -1,0 +1,5 @@
+~ start
+{{ Global.GUIDE_NAME }} : ทดสอบคุยกับเพื่อน
+{{ Global.FRIEND_NAME }} : สวัสดีเราคือเพื่อน
+{{ PlayerStatus.PLAYER_NAME }} : สวัสดี
+=> END
