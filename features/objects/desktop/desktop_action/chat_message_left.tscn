@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccjvs4ij8wrcg"]
+
+[ext_resource type="Script" path="res://features/objects/desktop/desktop_action/chat_message.gd" id="1_o7wgt"]
+[ext_resource type="Texture2D" uid="uid://conggjo1ot3eg" path="res://assets/ObjectAction/Chatbox/Chat Icon/PtaiL-PF.PNG" id="2_aasdq"]
+[ext_resource type="Texture2D" uid="uid://dfypo524dbai1" path="res://assets/ObjectAction/Chatbox/Resized/ChatMessage - Flipped.png" id="3_kl4vg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ha61e"]
+texture = ExtResource("3_kl4vg")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[node name="ChatMessageLeft" type="HBoxContainer"]
+size_flags_horizontal = 0
+script = ExtResource("1_o7wgt")
+
+[node name="ProfileBox" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+
+[node name="ProfileImage" type="TextureRect" parent="ProfileBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_aasdq")
+expand_mode = 1
+stretch_mode = 4
+flip_h = true
+
+[node name="MessageBox" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ha61e")
+
+[node name="Message" type="Label" parent="MessageBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... "
+autowrap_mode = 1

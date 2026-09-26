@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://features/objects/friend/friend_action/friend.gd" id="1_k6ulm"]
 
-[node name="Friend" type="Node2D"]
+[node name="Friend2" type="Node2D"]
 script = ExtResource("1_k6ulm")

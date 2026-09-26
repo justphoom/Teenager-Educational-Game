@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwpjsns1a343c"]
+
+[ext_resource type="Script" path="res://features/presentation/presentation.gd" id="1_utber"]
+
+[node name="Presentation" type="CanvasLayer"]
+script = ExtResource("1_utber")

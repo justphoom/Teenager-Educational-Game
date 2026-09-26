@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw35f6rwtxnpf"]
+
+[ext_resource type="Texture2D" uid="uid://bbb50jgrq54a5" path="res://assets/Misc/DialogueBox/Resized/DialogueResponseToggled.png" id="1_tgxux"]
+[ext_resource type="Script" path="res://features/store/store_item/store_item.gd" id="2_kelh3"]
+[ext_resource type="Texture2D" uid="uid://5owbp3gsxihd" path="res://assets/ObjectAction/Activities/Film - resized.png" id="3_1vyuo"]
+[ext_resource type="Theme" uid="uid://bq6xvq1b1sckx" path="res://common/theme/main_theme.tres" id="4_mli37"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pcnki"]
+texture = ExtResource("1_tgxux")
+texture_margin_left = 60.0
+texture_margin_top = 30.0
+texture_margin_right = 60.0
+texture_margin_bottom = 30.0
+
+[node name="StoreItem" type="PanelContainer"]
+custom_minimum_size = Vector2(720, 240)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pcnki")
+script = ExtResource("2_kelh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemImage" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_1vyuo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ItemName" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Item Name"
+horizontal_alignment = 1
+
+[node name="ItemDetail" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... "
+autowrap_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Select" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Select"
+
+[node name="Cancel" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_mli37")
+theme_type_variation = &"ButtonAlt"
+text = "Cancel"
+
+[node name="Buy" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_mli37")
+theme_type_variation = &"FlatButton"
+text = "Buy"

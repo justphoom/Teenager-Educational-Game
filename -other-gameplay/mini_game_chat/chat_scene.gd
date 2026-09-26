@@ -3,7 +3,7 @@ extends CanvasLayer
 var _chat_log_path : String
 var chat_log_list
 
-var chat_message = preload("res://mini-game-chat/chat_message.tscn")
+var chat_message = preload("res://features/objects/desktop/mini_game_chat/chat_message.tscn")
 var chat_message_obj
 
 var interator : int
@@ -14,7 +14,7 @@ var chat_log_json
 @onready var done_button : Button = $Done
 
 func _ready() -> void:
-	PlayerStatus.isOpenDialog = true
+	#PlayerStatus.isOpenDialog = true
 	interator = 0
 	done_button.hide()
 	self._get_chat_log_path()
@@ -53,8 +53,8 @@ func add_message(chat_name : String, message : String):
 func _on_done_pressed() -> void:
 	PlayerStatus.isOpenDialog = false
 	self.queue_free()
-	if Tutorial.is_tutorial_state:
-		Global.CURRENT_TIME = 3
-		Tutorial.after_chatting()
-		#DialogueManager.show_dialogue_balloon(load("res://dialogues/tutorial-object-desktop-1.dialogue"))
-		#Tutorial.after_finish_tutorial_chatting()
+	#if Tutorial.is_tutorial_state:
+		#Global.CURRENT_TIME = 3
+		#Tutorial.after_chatting()
+		##DialogueManager.show_dialogue_balloon(load("res://dialogues/tutorial-object-desktop-1.dialogue"))
+		##Tutorial.after_finish_tutorial_chatting()

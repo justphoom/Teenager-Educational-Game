@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bq6xvq1b1sckx"]
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://bq6xvq1b1sckx"]
 
 [ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="1_dc228"]
 [ext_resource type="Texture2D" uid="uid://bbb50jgrq54a5" path="res://assets/Misc/DialogueBox/Resized/DialogueResponseToggled.png" id="1_qg3ik"]
@@ -21,6 +21,24 @@ texture = ExtResource("3_l0f40")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyip3"]
 texture = ExtResource("3_btr2i")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qawwg"]
+texture = ExtResource("1_qg3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ybt"]
+texture = ExtResource("1_qg3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kf4n5"]
+texture = ExtResource("1_qg3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xt1eb"]
+texture = ExtResource("1_qg3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtlwb"]
+texture = ExtResource("1_qg3ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ad3g"]
+texture = ExtResource("1_qg3ik")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcil8"]
 texture = ExtResource("1_ribwn")
 texture_margin_left = 15.0
@@ -41,5 +59,15 @@ Button/styles/focus = SubResource("StyleBoxTexture_720yg")
 Button/styles/hover = SubResource("StyleBoxTexture_4rj8w")
 Button/styles/normal = SubResource("StyleBoxTexture_uu7hh")
 Button/styles/pressed = SubResource("StyleBoxTexture_jyip3")
+ButtonAlt/base_type = &"Button"
+ButtonAlt/styles/disabled = SubResource("StyleBoxTexture_qawwg")
+ButtonAlt/styles/focus = SubResource("StyleBoxTexture_52ybt")
+ButtonAlt/styles/hover = SubResource("StyleBoxTexture_kf4n5")
+ButtonAlt/styles/hover_pressed = SubResource("StyleBoxTexture_xt1eb")
+ButtonAlt/styles/normal = SubResource("StyleBoxTexture_vtlwb")
+ButtonAlt/styles/pressed = SubResource("StyleBoxTexture_2ad3g")
+Label/colors/font_color = Color(0.146529, 0.0379375, 0.0225645, 1)
+Label/colors/font_shadow_color = Color(0.0781722, 0.0159705, 0.00918868, 1)
+Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("1_dc228")
 Panel/styles/panel = SubResource("StyleBoxTexture_vcil8")

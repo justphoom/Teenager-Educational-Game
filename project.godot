@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Signals="*res://common/global/signals.gd"
 Global="*res://common/global/global.gd"
-PlayerStatus="*res://features/player/status_tab/player_status.gd"
+PlayerStatus="*res://features/player/-status_tab/player_status.gd"
 ScenceTransition="*res://common/utilities/scene transition/scence_transition.tscn"
 Utilities="*res://common/utilities/utilities.gd"
 ObjectiveAction="*res://common/utilities/objective_action.gd"
@@ -45,6 +45,12 @@ window/stretch/aspect="ignore"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[gui]
+
+theme/custom="res://common/theme/main_theme.tres"
+theme/custom_font="res://assets/Font/Itim/Itim-Regular.ttf"
+theme/default_font_multichannel_signed_distance_field=true
 
 [internationalization]
 

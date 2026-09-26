@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc4ew6ne63frb"]
+
+[ext_resource type="Texture2D" uid="uid://dslx7rne6nlmc" path="res://assets/ObjectAction/Chatbox/Resized/ChatMessage.png" id="1_1kyr5"]
+[ext_resource type="Script" path="res://features/objects/desktop/desktop_action/chat_message.gd" id="1_xhn1n"]
+[ext_resource type="Texture2D" uid="uid://conggjo1ot3eg" path="res://assets/ObjectAction/Chatbox/Chat Icon/PtaiL-PF.PNG" id="2_vnke4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mssjp"]
+texture = ExtResource("1_1kyr5")
+texture_margin_left = 20.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 20.0
+
+[node name="ChatMessageRight" type="HBoxContainer"]
+offset_right = 644.0
+offset_bottom = 161.0
+pivot_offset = Vector2(620, 0)
+size_flags_horizontal = 0
+script = ExtResource("1_xhn1n")
+
+[node name="MessageBox" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mssjp")
+
+[node name="Message" type="Label" parent="MessageBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... "
+autowrap_mode = 1
+
+[node name="ProfileBox" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+
+[node name="ProfileImage" type="TextureRect" parent="ProfileBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vnke4")
+expand_mode = 1
+stretch_mode = 4

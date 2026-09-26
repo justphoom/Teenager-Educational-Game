@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o8qgy68efjy6"]
 
-[ext_resource type="Script" path="res://features/objects/desktop/mini_game_chat/chat_message.gd" id="1_2hqev"]
+[ext_resource type="Script" path="res://-other-gameplay/mini_game_chat/chat_message.gd" id="1_2hqev"]
 [ext_resource type="FontFile" uid="uid://buip7qvkfhnu5" path="res://assets/Font/Itim/Itim-Regular.ttf" id="1_edkdl"]
 
 [node name="ChatMessage" type="Control"]

@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://1a6xma18uoqb"]
+
+[ext_resource type="Script" path="res://features/objects/desktop/desktop_action/desktop_chat.gd" id="1_4v8l6"]
+[ext_resource type="Texture2D" uid="uid://b5rjufkj6g1di" path="res://assets/ObjectAction/Chatbox/Resized/ChatBackground.png" id="1_pxvt6"]
+[ext_resource type="PackedScene" uid="uid://dc4ew6ne63frb" path="res://features/objects/desktop/desktop_action/chat_message_right.tscn" id="1_suvb0"]
+[ext_resource type="Texture2D" uid="uid://conggjo1ot3eg" path="res://assets/ObjectAction/Chatbox/Chat Icon/PtaiL-PF.PNG" id="2_1gshb"]
+[ext_resource type="PackedScene" uid="uid://ccjvs4ij8wrcg" path="res://features/objects/desktop/desktop_action/chat_message_left.tscn" id="2_wcw82"]
+
+[node name="DesktopChat" type="CanvasLayer"]
+script = ExtResource("1_4v8l6")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -485.0
+offset_right = 800.0
+offset_bottom = 485.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pxvt6")
+
+[node name="Layout" type="HBoxContainer" parent="Background"]
+layout_mode = 2
+offset_right = 1600.0
+offset_bottom = 970.0
+grow_vertical = 2
+
+[node name="Profile" type="VBoxContainer" parent="Background/Layout"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.25
+alignment = 1
+
+[node name="ProfileDisplay" type="TextureRect" parent="Background/Layout/Profile"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+texture = ExtResource("2_1gshb")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ProfileName" type="Label" parent="Background/Layout/Profile"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "พี่ต่ายสุดเท่"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChatBox" type="MarginContainer" parent="Background/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="ChatLayout" type="VBoxContainer" parent="Background/Layout/ChatBox"]
+layout_mode = 2
+
+[node name="ChatDisplay" type="ScrollContainer" parent="Background/Layout/ChatBox/ChatLayout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChatMessages" type="VBoxContainer" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="ChatMessageLeft" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("2_wcw82")]
+layout_mode = 2
+alignment = 2
+
+[node name="ChatMessageLeft2" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("2_wcw82")]
+layout_mode = 2
+
+[node name="ChatMessageRight" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("1_suvb0")]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="ChatMessageRight2" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("1_suvb0")]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="ChatMessageLeft3" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("2_wcw82")]
+layout_mode = 2
+alignment = 2
+
+[node name="ChatMessageLeft4" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("2_wcw82")]
+layout_mode = 2
+
+[node name="ChatMessageLeft5" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("2_wcw82")]
+layout_mode = 2
+
+[node name="ChatMessageRight3" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("1_suvb0")]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="ChatMessageRight4" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("1_suvb0")]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="ChatMessageLeft6" parent="Background/Layout/ChatBox/ChatLayout/ChatDisplay/ChatMessages" instance=ExtResource("2_wcw82")]
+layout_mode = 2
+
+[node name="ButtonLayout" type="Button" parent="Background/Layout/ChatBox/ChatLayout"]
+custom_minimum_size = Vector2(140, 80)
+layout_mode = 2
+size_flags_horizontal = 4

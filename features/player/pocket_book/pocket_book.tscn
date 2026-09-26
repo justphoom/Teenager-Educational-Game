@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c72rw2w8vhtl0"]
+
+[ext_resource type="Script" path="res://features/player/pocket_book/pocket_book.gd" id="1_ek6o5"]
+
+[node name="PocketBook" type="CanvasLayer"]
+script = ExtResource("1_ek6o5")
